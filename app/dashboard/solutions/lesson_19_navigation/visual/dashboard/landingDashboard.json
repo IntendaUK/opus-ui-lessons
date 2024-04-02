@@ -1,0 +1,36 @@
+{
+    "type": "containerSimple",
+    "prps": {
+        "singlePage": true,
+        "mainAxisAlign": "center",
+        "crossAxisAlign": "center"
+    },
+    "wgts": [
+        {
+            "type": "label",
+            "prps": {
+                "cpt": "Welcome to the login screen",
+                "fontSize": "fontSizeBiggest"
+            }
+        },
+        {
+            "type": "button",
+            "prps": {
+                "cpt": "Login",
+                "padding": true,
+                "border": "1px solid black",
+                "marginTop": "smallPadding",
+                "fireScript": {
+                    "actions": [
+                        {
+                            "type": "setState",
+                            "target": "v1",
+                            "key": "value",
+                            "value": "lessons/lesson_19_navigation/visual/dashboard/appDashboard"
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

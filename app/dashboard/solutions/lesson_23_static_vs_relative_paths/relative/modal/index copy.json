@@ -1,0 +1,14 @@
+{
+	"type": "containerSimple",
+	"prps": {},
+	"wgts": [
+		{
+			"traits": [
+				{
+					"trait": "lessons/23_static_vs_relative_paths/modal/index",
+					"traitPrps": {}
+				}
+			]
+		}
+	]
+}

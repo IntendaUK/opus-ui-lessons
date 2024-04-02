@@ -1,0 +1,31 @@
+{
+    "type": "containerSimple",
+    "prps": {
+        "dir": "horizontal"
+    },
+    "wgts": [
+        {
+            "traits": [
+                {
+                    "trait": "/lessons/lesson_23_static_vs_relative_paths/modal/toolbar/button/index",
+                    "traitPrps": {
+                        "label": "Login"
+                    }
+                }
+            ]
+        },
+        {
+            "traits": [
+                {
+                    "trait": "/lessons/lesson_23_static_vs_relative_paths/modal/toolbar/button/index",
+                    "traitPrps": {
+                        "label": "Forgot Password"
+                    }
+                }
+            ],
+            "prps": {
+                "marginLeft": "smallPadding"
+            }
+        }
+    ]
+}

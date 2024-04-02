@@ -1,0 +1,12 @@
+{
+    "acceptPrps": {
+        "header": {
+            "type": "string"
+        }
+    },
+    "type": "label",
+    "prps": {
+        "cpt": "%header%",
+        "marginLeft": "smallPadding"
+    }
+}

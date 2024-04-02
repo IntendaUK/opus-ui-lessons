@@ -1,0 +1,15 @@
+{
+	"type": "containerSimple",
+	"prps": {
+		"singlePage": true,
+		"backgroundColor": "cyan"
+	},
+	"wgts": [
+		{
+			"type": "label",
+			"prps": {
+				"cpt": "Hello world!"
+			}
+		}
+	]
+}

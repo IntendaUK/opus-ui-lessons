@@ -1,0 +1,28 @@
+{
+	"type": "containerSimple",
+	"prps": {
+		"singlePage": true,
+		"mainAxisAlign": "center",
+		"crossAxisAlign": "center"
+	},
+	"wgts": [
+		{
+			"type": "label",
+			"prps": {
+				"futureCpt": "It works!",
+				"scps": [
+					{
+						"actions": [
+							{
+								"type": "setMultiState",
+								"value": {
+									"cpt": "((state.self.futureCpt))"
+								}
+							}
+						]
+					}
+				]
+			}
+		}
+	]
+}

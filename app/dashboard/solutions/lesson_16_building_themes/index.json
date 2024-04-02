@@ -1,0 +1,18 @@
+{
+    "type": "containerSimple",
+    "prps": {
+        "singlePage": true,
+        "mainAxisAlign": "center",
+        "crossAxisAlign": "center"
+    },
+    "wgts": [
+        {
+            "type": "containerSimple",
+            "prps": {
+                "height": "100px",
+                "width": "100px",
+                "backgroundColor": "{theme.custom2.myown2}"
+            }
+        }
+    ]
+}

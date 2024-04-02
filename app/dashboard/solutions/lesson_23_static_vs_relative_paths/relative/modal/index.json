@@ -1,0 +1,39 @@
+{
+    "acceptPrps": {
+        "traitPathContext": {
+            "type": "string",
+            "dft": "./content/index"
+        }
+    },
+    "type": "containerSimple",
+    "prps": {},
+    "wgts": [
+        {
+            "traits": [
+                {
+                    "trait": "./header/index",
+                    "traitPrps": {
+                        "icon": "home",
+                        "header": "Login Form"
+                    }
+                }
+            ]
+        },
+        {
+            "traits": [
+                {
+                    "trait": "./content/index",
+                    "traitPrps": {}
+                }
+            ]
+        },
+        {
+            "traits": [
+                {
+                    "trait": "./toolbar/index",
+                    "traitPrps": {}
+                }
+            ]
+        }
+    ]
+}

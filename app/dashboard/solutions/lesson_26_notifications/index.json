@@ -1,0 +1,129 @@
+{
+    "type": "containerSimple",
+    "prps": {
+        "singlePage": true,
+        "mainAxisAlign": "center",
+        "crossAxisAlign": "center",
+        "backgroundColor": "lightGrey"
+    },
+    "wgts": [
+        {
+            "id": "ntfRoot",
+            "type": "notifications",
+            "container": "root",
+            "prps": {
+                "position": "absolute",
+                "top": "padding",
+                "right": "padding",
+                "minWidth": "150px",
+                "colorBackgroundSuccess": "success",
+                "colorBackgroundWarning": "warning",
+                "colorBackgroundInfo": "info",
+                "colorBackgroundDanger": "error",
+                "duration": "1500",
+                "prpsLabel": {
+                    "color": "white",
+                    "fontSize": "fontSizeMedium"
+                }
+            }
+        },
+        {
+            "type": "container",
+            "prps": {
+                "mainAxisAlign": "center",
+                "crossAxisAlign": "center",
+                "backgroundColor": "white",
+                "width": "50%",
+                "height": "50%",
+                "hasShadow": true,
+                "roundedBorders": true
+            },
+            "wgts": [
+                {
+                    "id": "NOTIFICATIONS",
+                    "type": "notifications",
+                    "prps": {
+                        "position": "absolute",
+                        "bottom": "padding",
+                        "right": "padding",
+                        "minWidth": "150px",
+                        "colorBackgroundSuccess": "success",
+                        "colorBackgroundWarning": "warning",
+                        "colorBackgroundInfo": "info",
+                        "colorBackgroundDanger": "error",
+                        "duration": "1500",
+                        "prpsLabel": {
+                            "color": "white",
+                            "fontSize": "fontSizeMedium"
+                        }
+                    }
+                },
+                {
+                    "scope": "input1",
+                    "type": "input",
+                    "prps": {
+                        "placeholder": "text goes here",
+                        "border": "1px solid lightGrey",
+                        "paddingSize": "0px smallPadding"
+                    }
+                },
+                {
+                    "scope": "input2",
+                    "type": "input",
+                    "prps": {
+                        "placeholder": "text goes here",
+                        "border": "1px solid lightGrey",
+                        "paddingSize": "0px smallPadding",
+                        "margin": "smallPadding"
+                    }
+                },
+                {
+                    "traits": [
+                        {
+                            "trait": "./traits/button",
+                            "traitPrps": {
+                                "target": "ntfRoot",
+                                "msgType": "info",
+                                "msg": "The value of the first input is ((state.||input1||.value))"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "traits": [
+                        {
+                            "trait": "./traits/button",
+                            "traitPrps": {
+                                "msgType": "warning",
+                                "msg": "The value of the second input is ((state.||input2||.value))"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "traits": [
+                        {
+                            "trait": "./traits/button",
+                            "traitPrps": {
+                                "target": "ntfRoot",
+                                "msgType": "danger",
+                                "msg": "The value of the first input is ((state.||input1||.value))"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "traits": [
+                        {
+                            "trait": "./traits/button",
+                            "traitPrps": {
+                                "msgType": "success",
+                                "msg": "The value of the second input is ((state.||input2||.value))"
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

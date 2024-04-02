@@ -1,0 +1,29 @@
+{
+    "acceptPrps": {},
+    "type": "containerSimple",
+    "prps": {},
+    "wgts": [
+        {
+            "traits": [
+                {
+                    "trait": "./../content/input/index",
+                    "traitPrps": {
+                        "icon": "person",
+                        "placeholder": "username..."
+                    }
+                }
+            ]
+        },
+        {
+            "traits": [
+                {
+                    "trait": "./../content/input/index",
+                    "traitPrps": {
+                        "icon": "lock",
+                        "placeholder": "password..."
+                    }
+                }
+            ]
+        }
+    ]
+}

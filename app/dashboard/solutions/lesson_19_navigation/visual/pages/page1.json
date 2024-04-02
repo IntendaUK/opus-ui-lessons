@@ -1,0 +1,17 @@
+{
+	"type": "containerSimple",
+	"prps": {
+		"singlePage": true,
+		"backgroundColor": "red"
+	},
+	"wgts": [
+		{
+			"type": "label",
+			"prps": {
+				"cpt": "Page 1",
+				"fontSize": "72px",
+				"color": "white"
+			}
+		}
+	]
+}

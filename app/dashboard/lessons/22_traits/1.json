@@ -1,0 +1,129 @@
+{
+	"type": "containerSimple",
+	"prps": {
+		"singlePage": true,
+		"backgroundColor": "lightGrey",
+		"dir": "horizontal",
+		"mainAxisAlign": "center",
+		"crossAxisAlign": "center"
+	},
+	"wgts": [
+		{
+			"scope": "modal",
+			"type": "containerSimple",
+			"prps": {
+				"hasShadow": true,
+				"margin": "4px",
+				"roundedBorders": true,
+				"backgroundColor": "white",
+				"border": "1px solid white",
+				"height": "20vh",
+				"minHeight": "400px",
+				"width": "10vw",
+				"minWidth": "300px"
+			},
+			"wgts": [
+				{
+					"relId": "header",
+					"type": "containerSimple",
+					"prps": {
+						"padding": true,
+						"paddingSize": "smallPadding",
+						"dir": "horizontal",
+						"backgroundColor": "samantha",
+						"crossAxisAlign": "center"
+					},
+					"wgts": [
+						{
+							"type": "icon",
+							"prps": {
+								"value": "face",
+								"color": "white"
+							}
+						},
+						{
+							"type": "label",
+							"prps": {
+								"cpt": "Modal",
+								"color": "white",
+								"bold": true,
+								"marginLeft": "smallPadding"
+							}
+						}
+					]
+				},
+				{
+					"relId": "content",
+					"type": "containerSimple",
+					"prps": {
+						"padding": true,
+						"paddingSize": "smallPadding",
+						"flex": true
+					},
+					"wgts": [
+						{
+							"type": "label",
+							"prps": {
+								"cpt": " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut gravida luctus ultrices. Curabitur id ipsum purus. Donec vel mi metus. Morbi a nisi at felis rhoncus semper. In in vehicula lorem, sit amet ultrices dolor. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum nisl lectus, finibus vel neque ut, ullamcorper blandit est. Morbi vehicula faucibus enim, eu egestas nibh. Sed a congue ex. Nullam aliquam euismod turpis et fringilla. Quisque ut libero et felis fermentum volutpat. Etiam eu finibus libero. Vestibulum rhoncus rutrum mauris eget suscipit. Aenean commodo, urna ut vulputate auctor, turpis metus malesuada tellus, ac dictum urna ligula eget magna. Sed metus risus, pellentesque eget volutpat eu, egestas at risus. Duis interdum nunc id vulputate ullamcorper.",
+								"justify": "stretch",
+								"color": "secondaryText"
+							}
+						}
+					]
+				},
+				{
+					"relId": "toolbar",
+					"type": "containerSimple",
+					"prps": {
+						"padding": true,
+						"paddingSize": "smallPadding",
+						"borderTop": "1px solid {theme.colors.divider}",
+						"backgroundColor": "white",
+						"dir": "horizontal",
+						"mainAxisAlign": "end"
+					},
+					"wgts": [
+						{
+							"type": "container",
+							"prps": {
+								"padding": true,
+								"paddingSize": "tinyPadding smallPadding",
+								"border": "1px solid {theme.colors.mediumGrey}",
+								"roundedBorders": true,
+								"canClick": true,
+								"fireScript": {
+									"actions": [
+										{
+											"type": "setState",
+											"target": "||modal||",
+											"key": "vis",
+											"value": false
+										}
+									]
+								},
+								"canHover": true,
+								"hoverPrps": {
+									"on": {
+										"backgroundColor": "lightGrey"
+									},
+									"off": {
+										"backgroundColor": "white"
+									}
+								}
+							},
+							"wgts": [
+								{
+									"type": "label",
+									"prps": {
+										"cpt": "Close",
+										"color": "primaryText"
+									}
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	]
+}

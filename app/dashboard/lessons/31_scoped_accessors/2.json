@@ -1,0 +1,48 @@
+{
+	"type": "containerSimple",
+	"prps": {
+		"singlePage": true,
+		"mainAxisAlign": "center",
+		"crossAxisAlign": "center"
+	},
+	"wgts": [
+		{
+			"type": "container",
+			"prps": {
+				"cptArray": [
+					"I",
+					"t",
+					" ",
+					"w",
+					"o",
+					"r",
+					"k",
+					"s",
+					"!"
+				],
+				"scps": [
+					{
+						"actions": [
+							{
+								"type": "mapArray",
+								"value": "{{state.self.cptArray}}",
+								"mapTo": {
+									"type": "label",
+									"prps": {
+										"cpt": "{{variable.record}}"
+									}
+								},
+								"storeAsVariable": "extraWgts"
+							},
+							{
+								"type": "setState",
+								"key": "extraWgts",
+								"value": "{{variable.extraWgts}}"
+							}
+						]
+					}
+				]
+			}
+		}
+	]
+}

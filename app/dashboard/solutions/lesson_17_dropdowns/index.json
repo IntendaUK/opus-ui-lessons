@@ -1,0 +1,116 @@
+{
+    "type": "containerSimple",
+    "prps": {
+        "singlePage": true,
+        "dir": "horizontal",
+        "mainAxisAlign": "center",
+        "crossAxisAlign": "start",
+        "padding": true
+    },
+    "wgts": [
+        {
+            "id": "input1",
+            "type": "input",
+            "prps": {
+                "open": "POPUP1",
+                "border": "1px solid black",
+                "width": "300px",
+                "marginRight": "smallPadding",
+                "placeholder": "Click to dropdown",
+                "autoDropdown": true,
+                "color": "black",
+                "lookupPrps": {
+                    "pageSize": 12,
+                    "hasHeader": true,
+                    "colorHeaderCellText": "blue",
+                    "colorCellText": "black",
+                    "colorCellTextHover": "red",
+                    "colorRowHoverBg": "green"
+                },
+                "lookupWgts": [
+                    {
+                        "id": "recordNumber",
+                        "cpt": "Record Num"
+                    },
+                    {
+                        "id": "age",
+                        "cpt": "Age Range"
+                    }
+                ],
+                "lookupData": [
+                    {
+                        "age": "1",
+                        "recordNumber": "Record 1"
+                    },
+                    {
+                        "age": "2",
+                        "recordNumber": "Record 2"
+                    },
+                    {
+                        "age": "3",
+                        "recordNumber": "Record 3"
+                    },
+                    {
+                        "age": "4",
+                        "recordNumber": "Record 4"
+                    },
+                    {
+                        "age": "5",
+                        "recordNumber": "Record 5"
+                    },
+                    {
+                        "age": "6",
+                        "recordNumber": "Record 6"
+                    },
+                    {
+                        "age": "7",
+                        "recordNumber": "Record 7"
+                    },
+                    {
+                        "age": "8",
+                        "recordNumber": "Record 8"
+                    },
+                    {
+                        "age": "9",
+                        "recordNumber": "Record 9"
+                    },
+                    {
+                        "age": "10",
+                        "recordNumber": "Record 10"
+                    },
+                    {
+                        "age": "11",
+                        "recordNumber": "Record 11"
+                    },
+                    {
+                        "age": "12",
+                        "recordNumber": "Record 12"
+                    }
+                ],
+                "lookupFlows": [
+                    {
+                        "fromKey": "value",
+                        "fromSubKey": "age",
+                        "toKey": "value"
+                    },
+                    {
+                        "fromKey": "value",
+                        "toKey": "selectedRecord"
+                    },
+                    {
+                        "fromSubKey": "age",
+                        "to": "input2",
+                        "toKey": "value"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "input2",
+            "type": "input",
+            "prps": {
+                "placeholder": "selected value"
+            }
+        }
+    ]
+}

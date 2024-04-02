@@ -1,0 +1,29 @@
+{
+    "acceptPrps": {},
+    "type": "containerSimple",
+    "prps": {},
+    "wgts": [
+        {
+            "traits": [
+                {
+                    "trait": "/lessons/lesson_23_static_vs_relative_paths/modal/content/input/index",
+                    "traitPrps": {
+                        "icon": "person",
+                        "placeholder": "username..."
+                    }
+                }
+            ]
+        },
+        {
+            "traits": [
+                {
+                    "trait": "/lessons/lesson_23_static_vs_relative_paths/modal/content/input/index",
+                    "traitPrps": {
+                        "icon": "lock",
+                        "placeholder": "password..."
+                    }
+                }
+            ]
+        }
+    ]
+}

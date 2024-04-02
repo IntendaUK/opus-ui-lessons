@@ -1,0 +1,31 @@
+{
+    "type": "containerSimple",
+    "prps": {
+        "dir": "horizontal"
+    },
+    "wgts": [
+        {
+            "traits": [
+                {
+                    "trait": "./../toolbar/button/index",
+                    "traitPrps": {
+                        "label": "Login"
+                    }
+                }
+            ]
+        },
+        {
+            "traits": [
+                {
+                    "trait": "./../toolbar/button/index",
+                    "traitPrps": {
+                        "label": "Forgot Password"
+                    }
+                }
+            ],
+            "prps": {
+                "marginLeft": "smallPadding"
+            }
+        }
+    ]
+}

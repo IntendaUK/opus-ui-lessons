@@ -1,0 +1,182 @@
+{
+    "type": "containerSimple",
+    "prps": {},
+    "wgts": [
+        {
+            "type": "label",
+            "prps": {
+                "data": [
+                    {
+                        "name": "Shaun",
+                        "surname": "Kichenbrand",
+                        "info": {
+                            "age": 38,
+                            "favouriteColor": "Red"
+                        }
+                    },
+                    {
+                        "name": "Santino",
+                        "surname": "Borzellino",
+                        "info": {
+                            "age": 30,
+                            "favouriteColor": "Blue"
+                        }
+                    }
+                ],
+                "scps": [
+                    {
+                        "id": "sL1",
+                        "actions": [
+                            {
+                                "type": "setVariable",
+                                "name": "data",
+                                "value": "{{state.self.data}}"
+                            },
+                            {
+                                "type": "setVariable",
+                                "name": "newData",
+                                "value": []
+                            },
+                            {
+                                "type": "forLoop",
+                                "value": "{{variable.data}}",
+                                "count": "{{variable.data.length}}",
+                                "actions": [
+                                    {
+                                        "type": "pushVariable",
+                                        "scope": "sL1",
+                                        "name": "newData",
+                                        "value": "{{sL1.variable.data.((variable.rowNumber)).name}}"
+                                    },
+                                    {
+                                        "type": "pushVariable",
+                                        "scope": "sL1",
+                                        "name": "newData",
+                                        "value": "{{sL1.variable.data.((variable.rowNumber)).surname}}"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "setState",
+                                "key": "cpt",
+                                "value": "((variable.newData))"
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "type": "label",
+            "prps": {
+                "myArray": [
+                    {
+                        "name": "Shaun",
+                        "surname": "Kichenbrand",
+                        "info": {
+                            "age": 38,
+                            "favouriteColor": "Red"
+                        }
+                    },
+                    {
+                        "name": "Santino",
+                        "surname": "Borzellino",
+                        "info": {
+                            "age": 30,
+                            "favouriteColor": "Blue"
+                        }
+                    }
+                ],
+                "scps": [
+                    {
+                        "actions": [
+                            {
+                                "type": "setVariable",
+                                "name": "myArray",
+                                "value": "{{state.self.myArray}}"
+                            },
+                            {
+                                "type": "mapArray",
+                                "value": "{{variable.myArray}}",
+                                "mapTo": {
+                                    "nameAndSurname": "((variable.record.name)) ((variable.record.surname))",
+                                    "age": "((variable.record.info.age))",
+                                    "favouriteColor": "((variable.record.info.favouriteColor))"
+                                },
+                                "storeAsVariable": "newArray"
+                            },
+                            {
+                                "type": "setState",
+                                "key": "result",
+                                "value": "{{variable.newArray}}"
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "type": "label",
+            "prps": {
+                "myArray": [
+                    {
+                        "name": "Shaun",
+                        "surname": "Kichenbrand",
+                        "info": {
+                            "age": 38,
+                            "favouriteColor": "Red"
+                        }
+                    },
+                    {
+                        "name": "Santino",
+                        "surname": "Borzellino",
+                        "info": {
+                            "age": 30,
+                            "favouriteColor": "Blue"
+                        }
+                    }
+                ],
+                "scps": [
+                    {
+                        "id": "sL3",
+                        "actions": [
+                            {
+                                "type": "setVariable",
+                                "name": "myArray",
+                                "value": "{{state.self.myArray}}"
+                            },
+                            {
+                                "type": "setVariable",
+                                "name": "newArray",
+                                "value": []
+                            },
+                            {
+                                "id": "sSL3",
+                                "type": "morphIterateArray",
+                                "value": "{{variable.myArray}}",
+                                "chain": [
+                                    {
+                                        "type": "pushVariable",
+                                        "scope": "sL3",
+                                        "name": "newArray",
+                                        "value": {
+                                            "nameAndSurname": "((sSL3.variable.record.name)) ((sSL3.variable.record.surname))",
+                                            "age": "((sSL3.variable.record.info.age))",
+                                            "favouriteColor": "((sSL3.variable.record.info.favouriteColor))",
+                                            "index": "((sSL3.variable.rowNum))"
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "setState",
+                                "key": "result",
+                                "value": "{{variable.newArray}}"
+                            }
+                        ]
+                    }
+                ]
+            }
+        }
+    ]
+}

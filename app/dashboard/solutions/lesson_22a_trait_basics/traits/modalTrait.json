@@ -1,0 +1,139 @@
+{
+    "acceptPrps": {
+        "backgroundColor": {
+            "type": "string"
+        },
+        "icon": {
+            "type": "string"
+        },
+        "label": {
+            "type": "string"
+        },
+        "buttonEnabled": {
+            "type": "boolean",
+            "dft": true
+        }
+    },
+    "scope": "modal",
+    "type": "containerSimple",
+    "prps": {
+        "hasShadow": true,
+        "margin": "4px",
+        "roundedBorders": true,
+        "backgroundColor": "white",
+        "border": "1px solid white",
+        "height": "20vh",
+        "minHeight": "400px",
+        "width": "10vw",
+        "minWidth": "300px"
+    },
+    "wgts": [
+        {
+            "relId": "header",
+            "type": "containerSimple",
+            "prps": {
+                "padding": true,
+                "paddingSize": "smallPadding",
+                "dir": "horizontal",
+                "backgroundColor": "%backgroundColor%",
+                "crossAxisAlign": "center"
+            },
+            "wgts": [
+                {
+                    "type": "icon",
+                    "prps": {
+                        "value": "%icon%",
+                        "color": "white"
+                    }
+                },
+                {
+                    "type": "label",
+                    "prps": {
+                        "cpt": "%label%",
+                        "color": "white",
+                        "bold": true,
+                        "marginLeft": "smallPadding"
+                    }
+                }
+            ]
+        },
+        {
+            "relId": "content",
+            "type": "containerSimple",
+            "prps": {
+                "padding": true,
+                "paddingSize": "smallPadding",
+                "flex": true,
+                "mainAxisAlign": "space-between"
+            },
+            "wgts": [
+                {
+                    "traits": [
+                        {
+                            "trait": "./fancyInput",
+                            "traitPrps": {
+                                "icon": "face",
+                                "value": "type...",
+                                "label": "Label"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "traits": [
+                        {
+                            "trait": "./fancyInput",
+                            "traitPrps": {
+                                "icon": "face",
+                                "value": "type...",
+                                "label": "Label"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "traits": [
+                        {
+                            "trait": "./fancyInput",
+                            "traitPrps": {
+                                "icon": "face",
+                                "value": "type...",
+                                "label": "Label"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "traits": [
+                        {
+                            "trait": "./fancyInput",
+                            "traitPrps": {
+                                "icon": "face",
+                                "value": "type...",
+                                "label": "Label"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "traits": [
+                        {
+                            "trait": "./fancyInput",
+                            "traitPrps": {
+                                "icon": "face",
+                                "value": "type...",
+                                "label": "Label"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "trait": "./closeModal",
+            "traitPrps": {
+                "enabled": "$buttonEnabled$"
+            }
+        }
+    ]
+}

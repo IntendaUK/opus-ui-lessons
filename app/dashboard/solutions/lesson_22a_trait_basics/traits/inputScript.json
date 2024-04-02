@@ -1,0 +1,27 @@
+{
+    "acceptPrps": {
+        "label": {
+            "type": "string"
+        },
+        "icon": {
+            "type": "string"
+        }
+    },
+    "prps": {
+        "scps": [
+            {
+                "triggers": [
+                    {
+                        "event": "onStateChange"
+                    }
+                ],
+                "actions": [
+                    {
+                        "type": "log",
+                        "msg": "%label% - %icon% -((state.||container.input||.value))"
+                    }
+                ]
+            }
+        ]
+    }
+}

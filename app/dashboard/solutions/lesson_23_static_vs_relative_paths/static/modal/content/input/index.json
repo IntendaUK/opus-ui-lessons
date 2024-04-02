@@ -1,0 +1,31 @@
+{
+    "acceptPrps": {
+        "icon": {
+            "type": "string"
+        },
+        "placeholder": {
+            "type": "string"
+        }
+    },
+    "scope": "input",
+    "type": "containerSimple",
+    "prps": {
+        "dir": "horizontal",
+        "crossAxisAlign": "center"
+    },
+    "wgts": [
+        {
+            "type": "icon",
+            "prps": {
+                "value": "%icon%"
+            }
+        },
+        {
+            "type": "input",
+            "prps": {
+                "placeholder": "%placeholder%",
+                "marginLeft": "tinyPadding"
+            }
+        }
+    ]
+}

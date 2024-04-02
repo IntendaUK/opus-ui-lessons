@@ -1,0 +1,71 @@
+{
+    "acceptPrps": {
+        "icon": {
+            "type": "string"
+        },
+        "label": {
+            "type": "string"
+        },
+        "iconColor": {
+            "type": "string"
+        },
+        "iconStyle": {
+            "type": "string"
+        }
+    },
+    "scope": "container",
+    "type": "container",
+    "prps": {
+        "dir": "horizontal",
+        "width": "50%",
+        "marginTop": "smallPadding",
+        "canHover": true,
+        "padding": true,
+        "paddingSize": "tinyPadding",
+        "roundedBorders": true,
+        "hoverPrps": {
+            "on": {
+                "backgroundColor": "white"
+            },
+            "off": {
+                "backgroundColor": "transparent"
+            }
+        }
+    },
+    "wgts": [
+        {
+            "relId": "icon",
+            "type": "icon",
+            "prps": {
+                "value": "%icon%",
+                "color": "%iconColor%",
+                "iconStyle": "%iconStyle%",
+                "flows": [
+                    {
+                        "from": "||container||",
+                        "fromKey": "hovered",
+                        "toKey": "color",
+                        "mapFunctionString": "v => v ? 'black' : '%iconColor%'"
+                    }
+                ]
+            }
+        },
+        {
+            "relId": "label",
+            "type": "label",
+            "prps": {
+                "cpt": "%label%",
+                "color": "white",
+                "marginLeft": "tinyPadding",
+                "flows": [
+                    {
+                        "from": "||container||",
+                        "fromKey": "hovered",
+                        "toKey": "color",
+                        "mapFunctionString": "v => v ? 'black' :  'white'"
+                    }
+                ]
+            }
+        }
+    ]
+}

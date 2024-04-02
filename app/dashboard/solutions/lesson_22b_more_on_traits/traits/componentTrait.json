@@ -1,0 +1,46 @@
+{
+    "acceptPrps": {
+        "wgtsTop": {
+            "type": "array",
+            "dft": []
+        },
+        "wgtsMiddle": {
+            "type": "array",
+            "dft": []
+        },
+        "wgtsBottom": {
+            "type": "array",
+            "dft": []
+        }
+    },
+    "scope": "mainContainer",
+    "type": "containerSimple",
+    "prps": {},
+    "wgts": [
+        {
+            "scope": "wgtsTop",
+            "type": "containerSimple",
+            "prps": {
+                "dir": "horizontal"
+            },
+            "wgts": "$wgtsTop$"
+        },
+        {
+            "scope": "wgtsMiddle",
+            "type": "containerSimple",
+            "prps": {
+                "marginTop": "smallPadding"
+            },
+            "wgts": "$wgtsMiddle$"
+        },
+        {
+            "scope": "wgtsBottom",
+            "type": "containerSimple",
+            "prps": {
+                "dir": "horizontal",
+                "marginTop": "auto"
+            },
+            "wgts": "$wgtsBottom$"
+        }
+    ]
+}

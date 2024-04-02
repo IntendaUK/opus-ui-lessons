@@ -1,0 +1,39 @@
+{
+    "acceptPrps": {
+        "traitPathContext": {
+            "type": "string",
+            "dft": "./content/index"
+        }
+    },
+    "type": "containerSimple",
+    "prps": {},
+    "wgts": [
+        {
+            "traits": [
+                {
+                    "trait": "/lessons/lesson_23_static_vs_relative_paths/static/modal/header/index",
+                    "traitPrps": {
+                        "icon": "home",
+                        "header": "Login Form"
+                    }
+                }
+            ]
+        },
+        {
+            "traits": [
+                {
+                    "trait": "/lessons/lesson_23_static_vs_relative_paths/static/modal/content/index",
+                    "traitPrps": {}
+                }
+            ]
+        },
+        {
+            "traits": [
+                {
+                    "trait": "/lessons/lesson_23_static_vs_relative_paths/static/modal/toolbar/index",
+                    "traitPrps": {}
+                }
+            ]
+        }
+    ]
+}

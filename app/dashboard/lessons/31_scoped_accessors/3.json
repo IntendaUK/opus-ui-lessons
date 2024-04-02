@@ -1,0 +1,57 @@
+{
+	"type": "containerSimple",
+	"prps": {
+		"singlePage": true,
+		"mainAxisAlign": "center",
+		"crossAxisAlign": "center"
+	},
+	"wgts": [
+		{
+			"type": "container",
+			"prps": {
+				"cptArray": [
+					"I",
+					"t",
+					" ",
+					"w",
+					"o",
+					"r",
+					"k",
+					"s",
+					"!"
+				],
+				"scps": [
+					{
+						"actions": [
+							{
+								"type": "setVariable",
+								"name": "extraWgts"
+							},
+							{
+								"type": "forLoop",
+								"count": "{{state.self.cptArray.length}}",
+								"actions": [
+									{
+										"type": "pushVariable",
+										"name": "extraWgts",
+										"value": {
+											"type": "label",
+											"prps": {
+												"cpt": "((state.self.cptArray.((variable.rowNumber))))"
+											}
+										}
+									}
+								]
+							},
+							{
+								"type": "setState",
+								"key": "extraWgts",
+								"value": "{{variable.extraWgts}}"
+							}
+						]
+					}
+				]
+			}
+		}
+	]
+}

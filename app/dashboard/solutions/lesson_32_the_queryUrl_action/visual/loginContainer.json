@@ -1,0 +1,101 @@
+{
+    "scope": "loginContainer",
+    "type": "containerSimple",
+    "prps": {
+        "position": "absolute",
+        "top": "100px",
+        "left": "50%",
+        "transform": "translate(-50%, 100px)",
+        "backgroundColor": "white",
+        "padding": true,
+        "vis": false,
+        "width": "300px",
+        "height": "300px",
+        "zIndex": 99
+    },
+    "wgts": [
+        {
+            "relId": "inputUser",
+            "type": "input",
+            "prps": {
+                "placeholder": "Username..."
+            }
+        },
+        {
+            "relId": "inputPass",
+            "type": "input",
+            "prps": {
+                "placeholder": "Password..."
+            }
+        },
+        {
+            "type": "button",
+            "prps": {
+                "cpt": "login",
+                "fireScript": {
+                    "id": "sQ",
+                    "actions": [
+                        {
+                            "type": "queryUrl",
+                            "url": "https://reqres.in/api/login",
+                            "method": "POST",
+                            "body": {
+                                "email": "{{sQ.state.||loginContainer.inputUser||.value}}",
+                                "password": "{{sQ.state.||loginContainer.inputPass||.value}}"
+                            },
+                            "extractAny": [
+                                {
+                                    "path": "status",
+                                    "variable": "statusCode"
+                                }
+                            ],
+                            "extractResults": [
+                                {
+                                    "path": "response.token",
+                                    "variable": "token"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "applyComparison",
+                            "operator": "case",
+                            "value": "{{variable.statusCode}}",
+                            "branch": {
+                                "200": [
+                                    {
+                                        "type": "showNotification",
+                                        "target": "NOTIFICATIONS",
+                                        "msgType": "success",
+                                        "msg": "Login successful. Token is {{variable.token}}"
+                                    },
+                                    {
+                                        "type": "log",
+                                        "msg": "Success: {{variable.statusCode}}"
+                                    },
+                                    {
+                                        "type": "setState",
+                                        "target": "||loginContainer||",
+                                        "key": "vis",
+                                        "value": false
+                                    }
+                                ],
+                                "400": [
+                                    {
+                                        "type": "showNotification",
+                                        "target": "NOTIFICATIONS",
+                                        "msgType": "danger",
+                                        "msg": "Login failed. Status Code {{variable.statusCode}}"
+                                    },
+                                    {
+                                        "type": "log",
+                                        "msg": "Error: {{variable.statusCode}}"
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

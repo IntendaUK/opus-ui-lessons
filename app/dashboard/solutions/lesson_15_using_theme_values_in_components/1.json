@@ -1,0 +1,19 @@
+{
+    "type": "containerSimple",
+    "prps": {
+        "singlePage": true
+    },
+    "wgts": [
+        {
+            "type": "containerSimple",
+            "prps": {
+                "backgroundColor": "success",
+                "width": "giantPadding",
+                "height": "{theme.global.giantPadding}",
+                "marginTop": "var(--global-padding)",
+                "marginLeft": "var(--global-padding)",
+                "border": "{theme.global.borderWidth} solid {theme.colors.secondary}"
+            }
+        }
+    ]
+}

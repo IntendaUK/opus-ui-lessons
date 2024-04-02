@@ -1,0 +1,29 @@
+{
+    "type": "containerSimple",
+    "prps": {
+        "singlePage": true,
+        "backgroundColor:": "lightGrey",
+        "crossAxisAlign": "end",
+        "dir": "vertical"
+    },
+    "wgts": [
+        {
+            "type": "icon",
+            "prps": {
+                "value": "face"
+            }
+        },
+        {
+            "type": "icon",
+            "prps": {
+                "value": "call"
+            }
+        },
+        {
+            "type": "icon",
+            "prps": {
+                "value": "home"
+            }
+        }
+    ]
+}

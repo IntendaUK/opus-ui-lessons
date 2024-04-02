@@ -1,0 +1,40 @@
+{
+	"type": "containerSimple",
+	"prps": {
+		"singlePage": true,
+		"backgroundColor": "lightGrey",
+		"dir": "horizontal",
+		"mainAxisAlign": "center",
+		"crossAxisAlign": "center"
+	},
+	"wgts": [
+		{
+			"traits": [
+				{
+					"trait": "./traits/modalTrait",
+					"traitPrps": {
+						"backgroundColor": "samantha",
+						"icon": "face",
+						"label": "Modal"
+					}
+				}
+			]
+		},
+		{
+			"traits": [
+				{
+					"trait": "./traits/modalTrait",
+					"traitPrps": {
+						"backgroundColor": "samantha",
+						"icon": "face",
+						"label": "Modal",
+						"buttonEnabled": false
+					}
+				}
+			],
+			"prps": {
+				"marginLeft": "padding"
+			}
+		}
+	]
+}

@@ -1,0 +1,43 @@
+{
+	"type": "containerSimple",
+	"prps": {
+		"singlePage": true,
+		"dir": "horizontal",
+		"flex": true
+	},
+	"wgts": [
+		{
+			"type": "containerSimple",
+			"prps": {
+				"backgroundColor": "blue",
+				"width": "200px"
+			},
+			"wgts": []
+		},
+		{
+			"type": "containerSimple",
+			"prps": {
+				"dir": "vertical",
+				"flex": true
+			},
+			"wgts": [
+				{
+					"type": "containerSimple",
+					"prps": {
+						"backgroundColor": "cyan",
+						"height": "5%"
+					},
+					"wgts": []
+				},
+				{
+					"type": "containerSimple",
+					"prps": {
+						"backgroundColor": "white",
+						"height": "95%"
+					},
+					"wgts": []
+				}
+			]
+		}
+	]
+}

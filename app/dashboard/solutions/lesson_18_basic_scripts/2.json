@@ -1,0 +1,70 @@
+{
+    "type": "containerSimple",
+    "prps": {},
+    "wgts": [
+        {
+            "id": "i1",
+            "type": "input",
+            "prps": {
+                "placeholder": "input one",
+                "scps": [
+                    {
+                        "triggers": [
+                            {
+                                "event": "onStateChange"
+                            }
+                        ],
+                        "actions": [
+                            {
+                                "log": true,
+                                "type": "setState",
+                                "target": "i2",
+                                "key": "color",
+                                "value": "((state.i1.value))"
+                            },
+                            {
+                                "log": true,
+                                "type": "setState",
+                                "target": "i2",
+                                "key": "value",
+                                "value": "((state.i1.value))!!!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "i2",
+            "type": "input",
+            "prps": {
+                "placeholder": "input two",
+                "scps": [
+                    {
+                        "triggers": [
+                            {
+                                "event": "onStateChange"
+                            }
+                        ],
+                        "actions": [
+                            {
+                                "log": true,
+                                "type": "setState",
+                                "target": "i3",
+                                "key": "value",
+                                "value": "((state.i1.value)) ((state.i2.value))"
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "i3",
+            "type": "input",
+            "prps": {
+                "placeholder": "input three"
+            }
+        }
+    ]
+}

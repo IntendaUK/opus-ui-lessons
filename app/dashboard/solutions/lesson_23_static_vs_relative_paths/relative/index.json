@@ -1,0 +1,18 @@
+{
+	"type": "containerSimple",
+	"prps": {
+		"singlePage": true,
+		"mainAxisAlign": "center",
+		"crossAxisAlign": "center"
+	},
+	"wgts": [
+		{
+			"traits": [
+				{
+					"trait": "./modal/index",
+					"traitPrps": {}
+				}
+			]
+		}
+	]
+}

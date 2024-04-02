@@ -1,0 +1,25 @@
+{
+    "id": "myDashboard",
+    "type": "containerSimple",
+    "prps": {
+        "singlePage": true,
+        "padding": true,
+        "backgroundColor": "lightGrey",
+        "myLabelCaption": "Hello world"
+    },
+    "wgts": [
+        {
+            "type": "label",
+            "prps": {
+                "cpt": "default",
+                "flows": [
+                    {
+                        "from": "myDashboard",
+                        "fromKey": "myLabelCaption",
+                        "toKey": "cpt"
+                    }
+                ]
+            }
+        }
+    ]
+}

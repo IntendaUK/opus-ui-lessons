@@ -1,0 +1,23 @@
+{
+    "type": "containerSimple",
+    "prps": {
+        "singlePage": "true"
+    },
+    "wgts": [
+        {
+            "type": "containerSimple",
+            "prps": {
+                "flex": true
+            },
+            "wgts": [
+                {
+                    "id": "v1",
+                    "type": "viewport",
+                    "prps": {
+                        "value": "lessons/lesson_19_navigation/visual/dashboard/landingDashboard"
+                    }
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,125 @@
+{
+	"type": "containerSimple",
+	"prps": {
+		"singlePage": true,
+		"mainAxisAlign": "center",
+		"crossAxisAlign": "center",
+		"autoChildMargins": true,
+		"backgroundColor": "white"
+	},
+	"wgts": [
+		{
+			"scope": "mainContainer",
+			"type": "containerSimple",
+			"prps": {
+				"backgroundColor": "white",
+				"hasShadow": true,
+				"width": "400px",
+				"height": "fit-content",
+				"crossAxisAlign": "center",
+				"padding": true,
+				"paddingSize": "mediumPadding"
+			},
+			"wgts": [
+				{
+					"traits": [
+						{
+							"trait": "./visual/header",
+							"traitPrps": {}
+						}
+					]
+				},
+				{
+					"traits": [
+						{
+							"trait": "./visual/entry",
+							"traitPrps": {
+								"name": "Whitney Blessing",
+								"email": "whitneyblessing@gmail.com",
+								"username": "whitney"
+							}
+						}
+					]
+				},
+				{
+					"traits": [
+						{
+							"trait": "./visual/entry",
+							"traitPrps": {
+								"name": "Cheryl Green",
+								"email": "cherylgreen@gmail.com",
+								"username": "cheryl"
+							}
+						}
+					]
+				},
+				{
+					"traits": [
+						{
+							"trait": "./visual/entry",
+							"traitPrps": {
+								"name": "Bonnie Lopez",
+								"email": "bonnielopez@gmail.com",
+								"username": "bonnie"
+							}
+						}
+					]
+				},
+				{
+					"scope": "addedContainer",
+					"type": "containerSimple",
+					"prps": {
+						"backgroundColor": "white",
+						"mainAxisAlign": "center",
+						"crossAxisAlign": "center",
+						"marginTop": "bigPadding",
+						"roundedBorder": true,
+						"border": "1px solid grey",
+						"width": "90%",
+						"minHeight": "bigPadding",
+						"padding": true,
+						"paddingSize": "tinyPadding"
+					},
+					"wgts": [
+						{
+							"relId": "whitney",
+							"traits": [
+								{
+									"trait": "./visual/displayEmail",
+									"traitPrps": {
+										"email": "whitneyblessing@gmail.com",
+										"username": "whitney"
+									}
+								}
+							]
+						},
+						{
+							"relId": "cheryl",
+							"traits": [
+								{
+									"trait": "./visual/displayEmail",
+									"traitPrps": {
+										"email": "cherylgreen@gmail.com",
+										"username": "cheryl"
+									}
+								}
+							]
+						},
+						{
+							"relId": "bonnie",
+							"traits": [
+								{
+									"trait": "./visual/displayEmail",
+									"traitPrps": {
+										"email": "boonielopez@gmail.com",
+										"username": "bonnie"
+									}
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	]
+}

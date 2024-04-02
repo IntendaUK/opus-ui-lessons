@@ -1,0 +1,61 @@
+{
+    "type": "containerSimple",
+    "prps": {
+        "singlePage": true,
+        "mainAxisAlign": "center",
+        "crossAxisAlign": "center",
+        "backgroundColor": "lightGrey"
+    },
+    "wgts": [
+        {
+            "type": "repeater",
+            "prps": {
+                "staticData": [
+                    {
+                        "name": "Adolf",
+                        "surname": "Mathebula",
+                        "age": 32,
+                        "membership": "Basic",
+                        "isActive": true
+                    },
+                    {
+                        "name": "Maria",
+                        "surname": "Gonzalez",
+                        "age": 28,
+                        "membership": "Premium",
+                        "isActive": true
+                    },
+                    {
+                        "name": "John",
+                        "surname": "Smith",
+                        "age": 45,
+                        "membership": "Basic",
+                        "isActive": false
+                    },
+                    {
+                        "name": "Emily",
+                        "surname": "Johnson",
+                        "age": 22,
+                        "membership": "Gold",
+                        "isActive": true
+                    },
+                    {
+                        "name": "David",
+                        "surname": "Brown",
+                        "age": 37,
+                        "membership": "Premium",
+                        "isActive": false
+                    }
+                ]
+            },
+            "traits": [
+                {
+                    "trait": "./rowMda",
+                    "traitPrps": {
+                        "rowData": "${{rowData}}$"
+                    }
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "acceptPrps": {
+        "keyToSet": {
+            "type": "string"
+        }
+    },
+    "prps": {
+        "flows": [
+            {
+                "to": "||container.label||",
+                "toKey": "%keyToSet%"
+            }
+        ]
+    }
+}

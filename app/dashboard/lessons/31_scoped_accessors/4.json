@@ -1,0 +1,85 @@
+{
+	"type": "containerSimple",
+	"prps": {
+		"singlePage": true,
+		"mainAxisAlign": "center",
+		"crossAxisAlign": "center"
+	},
+	"wgts": [
+		{
+			"type": "container",
+			"prps": {
+				"cptArray": [
+					"I",
+					"t",
+					"_",
+					"w",
+					"o",
+					"r",
+					"k",
+					"s",
+					"!"
+				],
+				"scps": [
+					{
+						"actions": [
+							{
+								"type": "setVariable",
+								"name": "extraWgts",
+								"value": []
+							},
+							{
+								"type": "morphIterateArray",
+								"value": "{{state.self.cptArray}}",
+								"chain": [
+									{
+										"type": "pushVariable",
+										"name": "extraWgts",
+										"value": {
+											"scope": "container",
+											"type": "container",
+											"prps": {
+												"canClick": true,
+												"fireScript": {
+													"actions": [
+														{
+															"type": "setVariable",
+															"name": "newColor",
+															"value": "red"
+														},
+														{
+															"type": "setMultiState",
+															"target": "||container.label||",
+															"value": {
+																"color": "((variable.newColor))",
+																"cpt": "((variable.record))"
+															}
+														}
+													]
+												}
+											},
+											"wgts": [
+												{
+													"relId": "label",
+													"type": "label",
+													"prps": {
+														"cpt": "?"
+													}
+												}
+											]
+										}
+									}
+								]
+							},
+							{
+								"type": "setState",
+								"key": "extraWgts",
+								"value": "{{variable.extraWgts}}"
+							}
+						]
+					}
+				]
+			}
+		}
+	]
+}

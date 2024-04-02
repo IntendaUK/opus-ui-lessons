@@ -1,0 +1,65 @@
+{
+	"type": "containerSimple",
+	"prps": {
+		"singlePage": true,
+		"dir": "vertical",
+		"mainAxisAlign": "center",
+		"crossAxisAlign": "center"
+	},
+	"wgts": [
+		{
+			"type": "containerSimple",
+			"prps": {
+				"dir": "horizontal",
+				"backgroundColor": "green"
+			},
+			"wgts": [
+				{
+					"type": "containerSimple",
+					"prps": {
+						"backgroundColor": "red",
+						"width": "400px",
+						"height": "400px"
+					},
+					"wgts": []
+				},
+				{
+					"type": "containerSimple",
+					"prps": {
+						"backgroundColor": "blue",
+						"width": "400px",
+						"height": "400px"
+					},
+					"wgts": []
+				}
+			]
+		},
+		{
+			"type": "containerSimple",
+			"prps": {
+				"dir": "horizontal",
+				"backgroundColor": "orange"
+			},
+			"wgts": [
+				{
+					"type": "containerSimple",
+					"prps": {
+						"backgroundColor": "blue",
+						"width": "400px",
+						"height": "400px"
+					},
+					"wgts": []
+				},
+				{
+					"type": "containerSimple",
+					"prps": {
+						"backgroundColor": "red",
+						"width": "400px",
+						"height": "400px"
+					},
+					"wgts": []
+				}
+			]
+		}
+	]
+}

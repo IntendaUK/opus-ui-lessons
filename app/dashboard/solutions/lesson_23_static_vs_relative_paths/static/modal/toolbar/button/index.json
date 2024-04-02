@@ -1,0 +1,19 @@
+{
+    "acceptPrps": {
+        "label": {
+            "type": "string"
+        }
+    },
+    "type": "containerSimple",
+    "prps": {
+        "borderBottom": "1px solid grey"
+    },
+    "wgts": [
+        {
+            "type": "button",
+            "prps": {
+                "cpt": "%label%"
+            }
+        }
+    ]
+}

@@ -1,0 +1,40 @@
+{
+    "type": "containerSimple",
+    "prps":{
+        "singlePage": true,
+        "backgroundColor": "lightGrey",
+        "padding": true
+    },
+    "wgts":[
+        {
+            "id":"i1",
+            "type": "icon",
+            "prps": {
+                "color": "blue",
+                "value":"home"
+            }
+        },
+        {
+            "id": "l1",
+            "type": "label",
+            "prps": {
+                "cpt": "Home",
+                "color": "black"
+            }
+        },
+        {
+            "type": "label",
+            "prps": {
+                "cpt": "Welcome to my dashbord",
+                "color": "black"
+            }
+        },
+        {
+            "id": "in1",
+            "type": "input",
+            "prps": {
+                "placeholder": "let it flow..."
+            }
+        }
+    ]
+}

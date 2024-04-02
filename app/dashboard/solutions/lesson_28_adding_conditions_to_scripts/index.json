@@ -1,0 +1,221 @@
+{
+    "scope": "dashboard",
+    "type": "containerSimple",
+    "prps": {
+        "singlePage": true,
+        "crossAxisAlign": "center",
+        "mainAxisAlign": "center",
+        "autoChildMargins": true
+    },
+    "wgts": [
+        {
+            "relId": "input1",
+            "type": "input",
+            "prps": {
+                "placeholder": "Type your text here...."
+            }
+        },
+        {
+            "relId": "input2",
+            "type": "input",
+            "prps": {
+                "placeholder": "Type your text here...."
+            }
+        },
+        {
+            "type": "label",
+            "prps": {
+                "cpt": "Label 1",
+                "scps": [
+                    {
+                        "triggers": [
+                            {
+                                "event": "onStateChange",
+                                "source": "||dashboard.input1||",
+                                "match": [
+                                    {
+                                        "operator": "isNotEqual",
+                                        "value": "{{state.||dashboard.input1||.value}}",
+                                        "compareValue": "abc"
+                                    }
+                                ]
+                            }
+                        ],
+                        "actions": [
+                            {
+                                "type": "setState",
+                                "key": "cpt",
+                                "value": "((eval.`Random number: ${~~(Math.random() * 999)}`))"
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "type": "label",
+            "prps": {
+                "cpt": "Label 2",
+                "scps": [
+                    {
+                        "triggers": [
+                            {
+                                "event": "onStateChange",
+                                "source": "||dashboard.input1||",
+                                "match": [
+                                    {
+                                        "operator": "isGreaterThan",
+                                        "value": "{{state.||dashboard.input1||.value}}",
+                                        "compareValue": 10
+                                    }
+                                ]
+                            },
+                            {
+                                "event": "onStateChange",
+                                "source": "||dashboard.input2||",
+                                "match": [
+                                    {
+                                        "operator": "isLessThan",
+                                        "value": "{{state.||dashboard.input2||.value}}",
+                                        "compareValue": 20
+                                    }
+                                ]
+                            }
+                        ],
+                        "actions": [
+                            {
+                                "type": "setState",
+                                "key": "cpt",
+                                "value": "((eval.`Random number: ${~~(Math.random() * 999)}`))"
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "type": "label",
+            "prps": {
+                "cpt": "Label 3",
+                "scps": [
+                    {
+                        "id": "sL3",
+                        "triggers": [
+                            {
+                                "event": "onStateChange",
+                                "source": "||dashboard.input1||"
+                            },
+                            {
+                                "event": "onStateChange",
+                                "source": "||dashboard.input2||"
+                            }
+                        ],
+                        "actions": [
+                            {
+                                "type": "applyComparison",
+                                "operator": "all",
+                                "comparisons": [
+                                    {
+                                        "operator": "isGreaterThan",
+                                        "value": "{{sL3.state.||dashboard.input1||.value}}",
+                                        "compareValue": 10
+                                    },
+                                    {
+                                        "operator": "isGreaterThan",
+                                        "value": "{{sL3.state.||dashboard.input2||.value}}",
+                                        "compareValue": 10
+                                    }
+                                ],
+                                "branch": {
+                                    "true": [
+                                        {
+                                            "type": "setState",
+                                            "key": "cpt",
+                                            "value": "((eval.`Big random number: ${~~(Math.random() * 999)}`))"
+                                        }
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "type": "label",
+            "prps": {
+                "cpt": "Label 4",
+                "scps": [
+                    {
+                        "id": "sL4",
+                        "triggers": [
+                            {
+                                "event": "onStateChange",
+                                "source": "||dashboard.input1||"
+                            },
+                            {
+                                "event": "onStateChange",
+                                "source": "||dashboard.input2||"
+                            }
+                        ],
+                        "actions": [
+                            {
+                                "actionCondition": {
+                                    "operator": "isEqual",
+                                    "value": "((sL4.state.||dashboard.input1||.value))((sL4.state.||dashboard.input2||.value))",
+                                    "compareValue": "abcdef"
+                                },
+                                "type": "setState",
+                                "key": "cpt",
+                                "value": "((eval.`Random number: ${~~(Math.random() * 999)}`))"
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "type": "label",
+            "prps": {
+                "cpt": "Label 5",
+                "scps": [
+                    {
+                        "id": "sL5",
+                        "triggers": [
+                            {
+                                "event": "onStateChange",
+                                "source": "||dashboard.input1||"
+                            },
+                            {
+                                "event": "onStateChange",
+                                "source": "||dashboard.input2||"
+                            }
+                        ],
+                        "actions": [
+                            {
+                                "actionCondition": {
+                                    "operator": "all",
+                                    "comparisons": [
+                                        {
+                                            "operator": "isGreaterThan",
+                                            "value": "{{sL5.state.||dashboard.input1||.value}}",
+                                            "compareValue": 10
+                                        },
+                                        {
+                                            "operator": "isGreaterThan",
+                                            "value": "{{sL5.state.||dashboard.input2||.value}}",
+                                            "compareValue": 10
+                                        }
+                                    ]
+                                },
+                                "type": "setState",
+                                "key": "cpt",
+                                "value": "((eval.`Big random number: ${~~(Math.random() * 999)}`))"
+                            }
+                        ]
+                    }
+                ]
+            }
+        }
+    ]
+}

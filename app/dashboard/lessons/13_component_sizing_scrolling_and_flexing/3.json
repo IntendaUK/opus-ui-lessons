@@ -1,0 +1,88 @@
+{
+	"type": "containerSimple",
+	"prps": {
+		"singlePage": true,
+		"dir": "horizontal"
+	},
+	"wgts": [
+		{
+			"type": "containerSimple",
+			"prps": {
+
+			},
+			"wgts": [
+				{
+					"type": "containerSimple",
+					"prps": {
+						"backgroundColor": "blue"
+					},
+					"wgts": []
+				},
+				{
+					"type": "container",
+					"prps": {
+						"backgroundColor": "white",
+						"scps": [
+							{
+								"actions": [
+									{
+										"type": "setState",
+										"key": "extraWgts",
+										"value": "{{eval.(new Array(100)).fill({ type: 'label', prps: { paddingSize: '12px', cpt: 'Menu Item'} })}}"
+									}
+								]
+							}
+						]
+					},
+					"wgts": []
+				}
+			]
+		},
+		{
+			"type": "containerSimple",
+			"prps": {
+
+			},
+			"wgts": [
+				{
+					"type": "container",
+					"prps": {
+						"backgroundColor": "lightGrey",
+						"scps": [
+							{
+								"actions": [
+									{
+										"type": "setState",
+										"key": "extraWgts",
+										"value": "{{eval.(new Array(100)).fill({ type: 'label', prps: { paddingSize: '12px', cpt: 'Page Item'} })}}"
+									}
+								]
+							}
+						]
+					},
+					"wgts": []
+				},
+				{
+					"type": "container",
+					"prps": {
+						"dir": "horizontal",
+						"backgroundColor": "darkGrey",
+						"crossAxisAlign": "center",
+						"scps": [
+							{
+								"actions": [
+									{
+										"type": "setState",
+										"key": "extraWgts",
+										"value": "{{eval.(new Array(100)).fill({ type: 'label', prps: { color: 'white', paddingSize: '12px', cpt: 'Toolbar Item'} })}}"
+									}
+								]
+							}
+						]
+					},
+					"wgts": []
+				}
+			]
+		}
+	]
+}

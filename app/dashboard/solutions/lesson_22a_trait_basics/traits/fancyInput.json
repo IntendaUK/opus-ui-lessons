@@ -1,0 +1,61 @@
+{
+    "acceptPrps": {
+        "value": {
+            "type": "string",
+            "dft": "Type here..."
+        },
+        "icon": {
+            "type": "string"
+        },
+        "label": {
+            "type": "string"
+        }
+    },
+    "scope": "container",
+    "type": "containerSimple",
+    "prps": {
+        "dir": "horizontal",
+        "crossAxisAlign": "center",
+        "backgroundColor": "lightGrey"
+    },
+    "wgts": [
+        {
+            "relId": "label",
+            "type": "label",
+            "prps": {
+                "cpt": "%label%"
+            }
+        },
+        {
+            "relId": "icon",
+            "type": "icon",
+            "prps": {
+                "value": "%icon%"
+            }
+        },
+        {
+            "relId": "input",
+            "type": "input",
+            "prps": {
+                "placeholder": "label here",
+                "value": "%value%",
+                "marginLeft": "tinyPadding"
+            },
+            "traits": [
+                {
+                    "trait": "./inputScript",
+                    "traitPrps": {
+                        "label": "%label%",
+                        "icon": "%icon%"
+                    }
+                },
+                {
+                    "trait": "./inputFlow",
+                    "traitPrps": {
+                        "keyToSet": "%label%"
+                    }
+                }
+            ]
+        }
+    ]
+}

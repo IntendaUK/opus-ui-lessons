@@ -1,0 +1,104 @@
+{
+    "acceptPrps": {
+        "name": {
+            "type": "string"
+        },
+        "username": {
+            "type": "string"
+        },
+        "email": {
+            "type": "string"
+        }
+    },
+    "scope": "innerContainer",
+    "type": "containerSimple",
+    "prps": {
+        "dir": "horizontal",
+        "crossAxisAlign": "center",
+        "autoChildMargins": true,
+        "marginTop": "smallPadding"
+    },
+    "wgts": [
+        {
+            "type": "icon",
+            "prps": {
+                "value": "face"
+            }
+        },
+        {
+            "type": "containerSimple",
+            "prps": {},
+            "wgts": [
+                {
+                    "type": "label",
+                    "prps": {
+                        "cpt": "%name%"
+                    }
+                },
+                {
+                    "relId": "email",
+                    "type": "label",
+                    "prps": {
+                        "cpt": "%email%"
+                    }
+                }
+            ]
+        },
+        {
+            "relId": "add",
+            "type": "container",
+            "prps": {
+                "border": "1px solid grey",
+                "roundedBorders": true,
+                "padding": true,
+                "paddingSize": "2px tinyPadding",
+                "canClick": true
+            },
+            "wgts": [
+                {
+                    "type": "label",
+                    "prps": {
+                        "cpt": "Add"
+                    }
+                }
+            ],
+            "traits": [
+                {
+                    "trait": "./../functional/addEmailScript",
+                    "traitPrps": {
+                        "username": "%username%"
+                    }
+                }
+            ]
+        },
+        {
+            "relId": "remove",
+            "type": "container",
+            "prps": {
+                "vis": false,
+                "border": "1px solid grey",
+                "roundedBorders": true,
+                "padding": true,
+                "paddingSize": "2px tinyPadding",
+                "canClick": true
+            },
+            "wgts": [
+                {
+                    "type": "label",
+                    "prps": {
+                        "cpt": "Remove",
+                        "color": "red"
+                    }
+                }
+            ],
+            "traits": [
+                {
+                    "trait": "./../functional/removeEmailScript",
+                    "traitPrps": {
+                        "username": "%username%"
+                    }
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,157 @@
+{
+    "type": "containerSimple",
+    "prps": {
+        "singlePage": true,
+        "dir": "horizontal"
+    },
+    "wgts": [
+        {
+            "relId": "menu",
+            "traits": [
+                {
+                    "trait": "./traits/componentTrait",
+                    "traitPrps": {
+                        "wgtsTop": [
+                            {
+                                "type": "icon",
+                                "prps": {
+                                    "value": "home",
+                                    "color": "white"
+                                }
+                            },
+                            {
+                                "type": "label",
+                                "prps": {
+                                    "cpt": "The Hub",
+                                    "color": "white",
+                                    "marginLeft": "smallPadding"
+                                }
+                            }
+                        ],
+                        "wgtsMiddle": [
+                            {
+                                "type": "label",
+                                "prps": {
+                                    "cpt": "Home",
+                                    "color": "white"
+                                }
+                            },
+                            {
+                                "type": "label",
+                                "prps": {
+                                    "cpt": "Chats",
+                                    "color": "white"
+                                }
+                            },
+                            {
+                                "type": "label",
+                                "prps": {
+                                    "cpt": "Gallery",
+                                    "color": "white"
+                                }
+                            },
+                            {
+                                "type": "label",
+                                "prps": {
+                                    "cpt": "Settings",
+                                    "color": "white"
+                                }
+                            }
+                        ],
+                        "wgtsBottom": [
+                            {
+                                "type": "button",
+                                "prps": {
+                                    "cpt": "Close",
+                                    "color": "white",
+                                    "fireScript": {
+                                        "actions": [
+                                            {
+                                                "type": "setState",
+                                                "target": "||mainContainer||",
+                                                "key": "vis",
+                                                "value": false
+                                            },
+                                            {
+                                                "type": "log",
+                                                "msg": "menu closed!!!"
+                                            }
+                                        ]
+                                    }
+                                }
+                            }
+                        ]
+                    }
+                }
+            ],
+            "prps": {
+                "backgroundColor": "darkGrey",
+                "padding": true,
+                "width": "200px"
+            }
+        },
+        {
+            "relId": "dashboard",
+            "traits": [
+                {
+                    "trait": "./traits/componentTrait",
+                    "traitPrps": {
+                        "wgtsTop": [
+                            {
+                                "type": "label",
+                                "prps": {
+                                    "cpt": "Dashboard",
+                                    "fontSize": "fontSizeBigger",
+                                    "fontWeight": "900"
+                                }
+                            }
+                        ],
+                        "wgtsMiddle": [
+                            {
+                                "type": "label",
+                                "prps": {
+                                    "cpt": "Content Area"
+                                }
+                            },
+                            {
+                                "relId": "input",
+                                "type": "input",
+                                "prps": {
+                                    "placeholder": "Type here...."
+                                }
+                            }
+                        ],
+                        "wgtsBottom": [
+                            {
+                                "type": "button",
+                                "prps": {
+                                    "cpt": "Clear Form",
+                                    "color": "white",
+                                    "fireScript": {
+                                        "actions": [
+                                            {
+                                                "type": "setState",
+                                                "target": "||mainContainer.input||",
+                                                "key": "value",
+                                                "value": ""
+                                            },
+                                            {
+                                                "type": "log",
+                                                "msg": "Input cleared!!!"
+                                            }
+                                        ]
+                                    }
+                                }
+                            }
+                        ]
+                    }
+                }
+            ],
+            "prps": {
+                "backgroundColor": "lightGrey",
+                "flex": true,
+                "padding": true
+            }
+        }
+    ]
+}

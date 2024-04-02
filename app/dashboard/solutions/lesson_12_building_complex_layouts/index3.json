@@ -1,0 +1,160 @@
+{
+    "comment": "main container",
+    "type": "containerSimple",
+    "prps": {
+        "singlePage": true,
+        "dir": "vertical"
+    },
+    "wgts": [
+        {
+            "comment": "top container",
+            "type": "containerSimple",
+            "prps": {
+                "flex": true,
+                "dir": "horizontal"
+            },
+            "wgts": [
+                {
+                    "comment": "top container left",
+                    "type": "containerSimple",
+                    "prps": {
+                        "flex": true,
+                        "dir": "vertical"
+                    },
+                    "wgts": [
+                        {
+                            "type": "containerSimple",
+                            "prps": {
+                                "flex": true,
+                                "backgroundColor": "black"
+                            }
+                        },
+                        {
+                            "type": "containerSimple",
+                            "prps": {
+                                "flex": true,
+                                "backgroundColor": "grey"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "comment": "top container  middle",
+                    "type": "containerSimple",
+                    "prps": {
+                        "flex": true,
+                        "backgroundColor": "red"
+                    }
+                },
+                {
+                    "comment": "top container right",
+                    "type": "containerSimple",
+                    "prps": {
+                        "flex": true,
+                        "backgroundColor": "orange"
+                    }
+                }
+            ]
+        },
+        {
+            "comment": "middle container",
+            "type": "containerSimple",
+            "prps": {
+                "flex": "true",
+                "dir": "horizontal"
+            },
+            "wgts": [
+                {
+                    "comment": "middle container left",
+                    "type": "containerSimple",
+                    "prps": {
+                        "flex": true,
+                        "backgroundColor": "yellow"
+                    }
+                },
+                {
+                    "comment": "middle container middle",
+                    "type": "containerSimple",
+                    "prps": {
+                        "flex": true,
+                        "dir": "vertical"
+                    },
+                    "wgts": [
+                        {
+                            "type": "containerSimple",
+                            "prps": {
+                                "flex": true,
+                                "backgroundColor": "black"
+                            }
+                        },
+                        {
+                            "type": "containerSimple",
+                            "prps": {
+                                "flex": true,
+                                "backgroundColor": "grey"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "comment": "middle container right",
+                    "type": "containerSimple",
+                    "prps": {
+                        "flex": true,
+                        "backgroundColor": "darkCyan"
+                    }
+                }
+            ]
+        },
+        {
+            "comment": "bottom container",
+            "type": "containerSimple",
+            "prps": {
+                "flex": true,
+                "dir": "horizontal"
+            },
+            "wgts": [
+                {
+                    "comment": "bottom container left",
+                    "type": "containerSimple",
+                    "prps": {
+                        "flex": true,
+                        "backgroundColor": "blue"
+                    }
+                },
+                {
+                    "comment": "bottom container middle",
+                    "type": "containerSimple",
+                    "prps": {
+                        "flex": true,
+                        "backgroundColor": "purple"
+                    }
+                },
+                {
+                    "comment": "bottom container right",
+                    "type": "containerSimple",
+                    "prps": {
+                        "flex": true,
+                        "dir": "vertical"
+                    },
+                    "wgts": [
+                        {
+                            "type": "containerSimple",
+                            "prps": {
+                                "flex": true,
+                                "backgroundColor": "black"
+                            }
+                        },
+                        {
+                            "type": "containerSimple",
+                            "prps": {
+                                "flex": true,
+                                "backgroundColor": "grey"
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

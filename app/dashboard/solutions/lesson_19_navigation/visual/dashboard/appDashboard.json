@@ -1,0 +1,90 @@
+{
+	"type": "containerSimple",
+	"prps": {
+		"singlePage": true,
+		"dir": "horizontal"
+	},
+	"wgts": [
+		{
+			"type": "containerSimple",
+			"prps": {
+				"width": "10%",
+				"height": "100%",
+				"backgroundColor": "lightGrey",
+				"mainAxisAlign": "space-between",
+				"padding": true
+			},
+			"wgts": [
+				{
+					"type": "containerSimple",
+					"prps": {},
+					"wgts": [
+						{
+							"type": "button",
+							"prps": {
+								"cpt": "Open Page 1",
+								"fireScript": {
+									"actions": [
+										{
+											"type": "setState",
+											"target": "v_1",
+											"key": "value",
+											"value": "lessons/lesson_19_navigation/visual/pages/page1"
+										}
+									]
+								}
+							}
+						},
+						{
+							"type": "button",
+							"prps": {
+								"cpt": "Open Page 2",
+								"fireScript": {
+									"actions": [
+										{
+											"type": "setState",
+											"target": "v_1",
+											"key": "value",
+											"value": "lessons/lesson_19_navigation/visual/pages/page2"
+										}
+									]
+								}
+							}
+						}
+					]
+				},
+				{
+					"type": "button",
+					"prps": {
+						"cpt": "Log Out",
+						"fireScript": {
+							"actions": [
+								{
+									"type": "setState",
+									"target": "v1",
+									"key": "value",
+									"value": "lessons/lesson_19_navigation/visual/dashboard/landingDashboard"
+								}
+							]
+						}
+					}
+				}
+			]
+		},
+		{
+			"type": "containerSimple",
+			"prps": {
+				"flex": true
+			},
+			"wgts": [
+				{
+					"id": "v_1",
+					"type": "viewport",
+					"prps": {
+						"value": "lessons/lesson_19_navigation/visual/dashboard/appDashboardMsg"
+					}
+				}
+			]
+		}
+	]
+}

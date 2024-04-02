@@ -1,0 +1,30 @@
+{
+    "acceptPrps": {},
+    "type": "containerSimple",
+    "prps": {
+        "mainAxisAlign": "center",
+        "crossAxisAlign": "center",
+        "autoChildMargins": true,
+        "autoChildMarginsSize": "smallPadding"
+    },
+    "wgts": [
+        {
+            "type": "icon",
+            "prps": {
+                "value": "navigation"
+            }
+        },
+        {
+            "type": "label",
+            "prps": {
+                "cpt": "Invite People to this Project"
+            }
+        },
+        {
+            "type": "label",
+            "prps": {
+                "cpt": "Invite existing team members of add new ones."
+            }
+        }
+    ]
+}

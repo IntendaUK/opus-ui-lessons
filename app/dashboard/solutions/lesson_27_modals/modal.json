@@ -1,0 +1,102 @@
+{
+	"acceptPrps": {},
+	"scope": "modal",
+	"type": "containerSimple",
+	"container": "root",
+	"prps": {
+		"position": "absolute",
+		"left": "0px",
+		"top": "0px",
+		"width": "100vw",
+		"height": "100vh",
+		"backgroundColor": "rgba(0, 0, 0, 0.65)",
+		"mainAxisAlign": "center",
+		"crossAxisAlign": "center",
+		"vis": false
+	},
+	"wgts": [
+		{
+			"type": "containerSimple",
+			"prps": {
+				"width": "20vw",
+				"height": "50vh",
+				"hasShadow": true,
+				"roundedBorders": true,
+				"margin": "4px",
+				"backgroundColor": "white",
+				"padding": true,
+				"autoChildMargins": true
+			},
+			"wgts": [
+				{
+					"type": "label",
+					"prps": {
+						"cpt": "",
+						"fontSize": "32px",
+						"color": "primary",
+						"flows": [
+							{
+								"from": "||modal||",
+								"fromKey": "heading",
+								"toKey": "cpt"
+							}
+						]
+					}
+				},
+				{
+					"type": "input",
+					"prps": {
+						"placeholder": "Please type your name...",
+						"flows": [
+							{
+								"to": "||modal||",
+								"toKey": "name"
+							}
+						]
+					}
+				},
+				{
+					"type": "input",
+					"prps": {
+						"placeholder": "Please type your surname...",
+						"flows": [
+							{
+								"to": "||modal||",
+								"toKey": "surname"
+							}
+						]
+					}
+				},
+				{
+					"type": "container",
+					"prps": {
+						"canClick": true,
+						"backgroundColor": "lightGrey",
+						"marginTop": "auto",
+						"marginLeft": "auto",
+						"fireScript": {
+							"actions": [
+								{
+									"type": "setState",
+									"target": "||modal||",
+									"key": "vis",
+									"value": false
+								}
+							]
+						},
+						"padding": true,
+						"paddingSize": "smallPadding mediumPadding"
+					},
+					"wgts": [
+						{
+							"type": "label",
+							"prps": {
+								"cpt": "Close"
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

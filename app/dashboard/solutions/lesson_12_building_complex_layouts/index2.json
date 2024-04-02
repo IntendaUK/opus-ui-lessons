@@ -1,0 +1,91 @@
+{
+    "comment": "main container",
+    "type": "containerSimple",
+    "prps": {
+        "singlePage": true,
+        "dir": "horizontal"
+    },
+    "wgts": [
+        {
+            "comment": "left container",
+            "type": "containerSimple",
+            "prps": {
+                "flex": true,
+                "backgroundColor": "red"
+            }
+        },
+        {
+            "comment": "middle container",
+            "type": "containerSimple",
+            "prps": {
+                "flex": true,
+                "dir": "vertical"
+            },
+            "wgts": [
+                {
+                    "type": "containerSimple",
+                    "prps": {
+                        "flex": true,
+                        "backgroundColor": "orange"
+                    }
+                },
+                {
+                    "type": "containerSimple",
+                    "prps": {
+                        "flex": true,
+                        "backgroundColor": "yellow"
+                    }
+                },
+                {
+                    "type": "containerSimple",
+                    "prps": {
+                        "flex": true,
+                        "backgroundColor": "green"
+                    }
+                }
+            ]
+        },
+        {
+            "comment": "right container",
+            "type": "containerSimple",
+            "prps": {
+                "flex": true,
+                "dir": "vertical"
+            },
+            "wgts": [
+                {
+                    "comment": "top right container",
+                    "type": "containerSimple",
+                    "prps": {
+                        "flex": true,
+                        "backgroundColor": "darkCyan"
+                    }
+                },
+                {
+                    "comment": "bottom right container",
+                    "type": "containerSimple",
+                    "prps": {
+                        "flex": true,
+                        "dir": "horizontal"
+                    },
+                    "wgts": [
+                        {
+                            "type": "containerSimple",
+                            "prps": {
+                                "flex": true,
+                                "backgroundColor": "blue"
+                            }
+                        },
+                        {
+                            "type": "containerSimple",
+                            "prps": {
+                                "flex": true,
+                                "backgroundColor": "purple"
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

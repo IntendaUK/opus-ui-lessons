@@ -1,0 +1,39 @@
+{
+    "acceptPrps": {
+        "icon": {
+            "type": "string",
+            "dft": "home"
+        },
+        "header": {
+            "type": "string",
+            "dft": "Header text"
+        }
+    },
+    "type": "containerSimple",
+    "prps": {
+        "dir": "horizontal",
+        "crossAxisAlign": "center"
+    },
+    "wgts": [
+        {
+            "traits": [
+                {
+                    "trait": "/lessons/lesson_23_static_vs_relative_paths/modal/header/icon",
+                    "traitPrps": {
+                        "icon": "%icon%"
+                    }
+                }
+            ]
+        },
+        {
+            "traits": [
+                {
+                    "trait": "/lessons/lesson_23_static_vs_relative_paths/modal/header/label",
+                    "traitPrps": {
+                        "header": "%header%"
+                    }
+                }
+            ]
+        }
+    ]
+}

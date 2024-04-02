@@ -1,0 +1,73 @@
+{
+	"type": "containerSimple",
+	"prps": {
+		"singlePage": true,
+		"dir": "vertical",
+		"mainAxisAlign": "center",
+		"crossAxisAlign": "center"
+	},
+	"wgts": [
+		{
+			"type": "containerSimple",
+			"prps": {
+				"dir": "horizontal",
+				"backgroundColor": "green",
+				"padding": true,
+				"paddingSize": "mediumPadding"
+			},
+			"wgts": [
+				{
+					"type": "containerSimple",
+					"prps": {
+						"backgroundColor": "red",
+						"width": "400px",
+						"height": "400px",
+						"marginRight": "smallPadding"
+					},
+					"wgts": []
+				},
+				{
+					"type": "containerSimple",
+					"prps": {
+						"backgroundColor": "blue",
+						"width": "400px",
+						"height": "400px",
+						"marginLeft": "smallPadding"
+					},
+					"wgts": []
+				}
+			]
+		},
+		{
+			"type": "containerSimple",
+			"prps": {
+				"dir": "horizontal",
+				"backgroundColor": "orange",
+				"padding": true,
+				"paddingSize": "mediumPadding"
+			},
+			"wgts": [
+				{
+					"type": "containerSimple",
+					"prps": {
+						"backgroundColor": "blue",
+						"width": "400px",
+						"height": "400px",
+						"margin": "mediumPadding smallPadding 0px 0px"
+					},
+					"wgts": []
+				},
+				{
+					"type": "containerSimple",
+					"prps": {
+						"backgroundColor": "red",
+						"width": "400px",
+						"height": "400px",
+						"margin": "0px 0px mediumPadding smallPadding"
+					},
+					"wgts": []
+				}
+			]
+		}
+	]
+}

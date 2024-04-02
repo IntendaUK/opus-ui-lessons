@@ -1,0 +1,185 @@
+{
+    "acceptPrps": {
+        "icon": {
+            "type": "string"
+        },
+        "label": {
+            "type": "string"
+        },
+        "iconColor": {
+            "type": "string"
+        },
+        "iconStyle": {
+            "type": "string"
+        }
+    },
+    "scope": "container",
+    "type": "container",
+    "prps": {
+        "dir": "horizontal",
+        "width": "50%",
+        "marginTop": "smallPadding",
+        "padding": true,
+        "paddingSize": "tinyPadding",
+        "roundedBorders": true,
+        "canHover": true,
+        "scps": [
+            {
+                "triggers": [
+                    {
+                        "event": "onStateChange",
+                        "source": "||container||",
+                        "key": "hovered",
+                        "match": [
+                            {
+                                "operator": "isTruthy",
+                                "key": "hovered"
+                            }
+                        ]
+                    }
+                ],
+                "actions": [
+                    {
+                        "type": "setState",
+                        "key": "backgroundColor",
+                        "value": "white"
+                    }
+                ]
+            },
+            {
+                "triggers": [
+                    {
+                        "event": "onStateChange",
+                        "source": "||container||",
+                        "key": "hovered",
+                        "match": [
+                            {
+                                "operator": "isFalsy",
+                                "key": "hovered"
+                            }
+                        ]
+                    }
+                ],
+                "actions": [
+                    {
+                        "type": "setState",
+                        "key": "backgroundColor",
+                        "value": "transparent"
+                    }
+                ]
+            }
+        ]
+    },
+    "wgts": [
+        {
+            "relId": "icon",
+            "type": "icon",
+            "prps": {
+                "value": "%icon%",
+                "color": "%iconColor%",
+                "iconStyle": "%iconStyle%",
+                "scps": [
+                    {
+                        "triggers": [
+                            {
+                                "event": "onStateChange",
+                                "source": "||container||",
+                                "key": "hovered",
+                                "match": [
+                                    {
+                                        "operator": "isTruthy",
+                                        "key": "hovered"
+                                    }
+                                ]
+                            }
+                        ],
+                        "actions": [
+                            {
+                                "type": "setState",
+                                "key": "color",
+                                "value": "black"
+                            }
+                        ]
+                    },
+                    {
+                        "triggers": [
+                            {
+                                "event": "onStateChange",
+                                "source": "||container||",
+                                "key": "hovered",
+                                "match": [
+                                    {
+                                        "operator": "isFalsy",
+                                        "key": "hovered"
+                                    }
+                                ]
+                            }
+                        ],
+                        "actions": [
+                            {
+                                "type": "setState",
+                                "key": "color",
+                                "value": "%iconColor%"
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "relId": "label",
+            "type": "label",
+            "prps": {
+                "cpt": "%label%",
+                "color": "white",
+                "marginLeft": "tinyPadding",
+                "scps": [
+                    {
+                        "triggers": [
+                            {
+                                "event": "onStateChange",
+                                "source": "||container||",
+                                "key": "hovered",
+                                "match": [
+                                    {
+                                        "operator": "isTruthy",
+                                        "key": "hovered"
+                                    }
+                                ]
+                            }
+                        ],
+                        "actions": [
+                            {
+                                "type": "setState",
+                                "key": "color",
+                                "value": "black"
+                            }
+                        ]
+                    },
+                    {
+                        "triggers": [
+                            {
+                                "event": "onStateChange",
+                                "source": "||container||",
+                                "key": "hovered",
+                                "match": [
+                                    {
+                                        "operator": "isFalsy",
+                                        "key": "hovered"
+                                    }
+                                ]
+                            }
+                        ],
+                        "actions": [
+                            {
+                                "type": "setState",
+                                "key": "color",
+                                "value": "white"
+                            }
+                        ]
+                    }
+                ]
+            }
+        }
+    ]
+}

@@ -1,0 +1,108 @@
+{
+    "scope": "usersContainer",
+    "type": "containerSimple",
+    "prps": {
+        "position": "absolute",
+        "top": "100px",
+        "left": "50%",
+        "transform": "translate(-50%, 100px)",
+        "backgroundColor": "white",
+        "padding": true,
+        "vis": false,
+        "width": "30%",
+        "mainAxisAlign": "space-between",
+        "flex": true,
+        "flexWrap": "wrap",
+        "height": "500px",
+        "dir": "horizontal",
+        "data": [],
+        "scps": [
+            {
+                "id": "sU",
+                "triggers": [
+                    {
+                        "event": "onStateChange",
+                        "source": "||usersContainer||",
+                        "key": "vis",
+                        "match": [
+                            {
+                                "operator": "isTruthy",
+                                "key": "vis"
+                            }
+                        ]
+                    }
+                ],
+                "actions": [
+                    {
+                        "type": "queryUrl",
+                        "url": "https://reqres.in/api/users?page=2",
+                        "method": "GET",
+                        "extractResults": [
+                            {
+                                "path": "response.data",
+                                "variable": "data"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "setState",
+                        "key": "data",
+                        "value": "{{variable.data}}"
+                    },
+                    {
+                        "type": "log",
+                        "msg": "{{sU.state.||usersContainer||.data}}"
+                    }
+                ]
+            }
+        ]
+    },
+    "wgts": [
+        {
+            "type": "repeater",
+            "prps": {
+                "data": [],
+                "rowMda": {
+                    "type": "containerSimple",
+                    "prps": {},
+                    "wgts": [
+                        {
+                            "type": "image",
+                            "prps": {
+                                "value": "((rowData.avatar))",
+                                "width": "70px",
+                                "height": "70px"
+                            }
+                        },
+                        {
+                            "type": "label",
+                            "prps": {
+                                "cpt": "((rowData.id))"
+                            }
+                        },
+                        {
+                            "type": "label",
+                            "prps": {
+                                "cpt": "((rowData.first_name)) ((rowData.last_name))",
+                                "fontWeight": 800
+                            }
+                        },
+                        {
+                            "type": "label",
+                            "prps": {
+                                "cpt": "((rowData.email))"
+                            }
+                        }
+                    ]
+                },
+                "flows": [
+                    {
+                        "from": "||usersContainer||",
+                        "fromKey": "data",
+                        "toKey": "data"
+                    }
+                ]
+            }
+        }
+    ]
+}

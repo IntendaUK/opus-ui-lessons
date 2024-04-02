@@ -1,0 +1,34 @@
+{
+    "acceptPrps": {
+        "target": {
+            "type": "string"
+        },
+        "msgType": {
+            "type": "string"
+        },
+        "msg": {
+            "type": "string"
+        }
+    },
+    "type": "button",
+    "prps": {
+        "cpt": "Click Me!",
+        "marginTop": "smallPadding",
+        "padding": true,
+        "paddingSize": "tinyPadding smallPadding",
+        "color": "green",
+        "prpsLabel": {
+            "color": "white"
+        },
+        "fireScript": {
+            "actions": [
+                {
+                    "type": "showNotification",
+                    "target": "%target%",
+                    "msgType": "%msgType%",
+                    "msg": "%msg%"
+                }
+            ]
+        }
+    }
+}

@@ -1,0 +1,26 @@
+{
+	"type": "containerSimple",
+	"prps": {
+		"singlePage": true,
+		"backgroundColor": "lightGrey",
+        "padding": true
+	},
+	"wgts": [
+		{
+			"type": "label",
+			"prps": {
+				"cpt": "I am a label",
+                "fontSize": "48px",
+                "color": "red"
+			}
+		},
+		{
+			"type": "label",
+			"prps": {
+				"cpt": "I am a small blue label",
+                "fontSize": "24x",
+                "color": "blue"
+			}
+		}
+	]
+}

@@ -1,0 +1,109 @@
+{
+    "acceptPrps": {
+        "rowData": {
+            "type": "object"
+        }
+    },
+    "prps": {
+        "rowMda": {
+            "type": "container",
+            "prps": {
+                "border": "2px solid blue",
+                "margin": "10px",
+                "padding": true,
+                "paddingSize": "smallPadding",
+                "enabled": "{{rowData.isActive}}"
+            },
+            "wgts": [
+                {
+                    "type": "container",
+                    "prps": {
+                        "canClick": true,
+                        "fireScript": {
+                            "actions": [
+                                {
+                                    "type": "log",
+                                    "msg": "((rowData.name))"
+                                }
+                            ]
+                        }
+                    },
+                    "wgts": [
+                        {
+                            "type": "label",
+                            "prps": {
+                                "cpt": "Name: ((rowData.name))"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "container",
+                    "prps": {
+                        "canClick": true,
+                        "fireScript": {
+                            "actions": [
+                                {
+                                    "type": "log",
+                                    "msg": "((rowData.surname))"
+                                }
+                            ]
+                        }
+                    },
+                    "wgts": [
+                        {
+                            "type": "label",
+                            "prps": {
+                                "cpt": "Surname: ((rowData.surname))"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "container",
+                    "prps": {
+                        "canClick": true,
+                        "fireScript": {
+                            "actions": [
+                                {
+                                    "type": "log",
+                                    "msg": "((rowData.age))"
+                                }
+                            ]
+                        }
+                    },
+                    "wgts": [
+                        {
+                            "type": "label",
+                            "prps": {
+                                "cpt": "Age: ((rowData.age))"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "container",
+                    "prps": {
+                        "canClick": true,
+                        "fireScript": {
+                            "actions": [
+                                {
+                                    "type": "log",
+                                    "msg": "((rowData.membership))"
+                                }
+                            ]
+                        }
+                    },
+                    "wgts": [
+                        {
+                            "type": "label",
+                            "prps": {
+                                "cpt": "Membership: ((rowData.membership))"
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}

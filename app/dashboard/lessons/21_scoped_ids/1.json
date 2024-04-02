@@ -1,0 +1,61 @@
+{
+	"type": "containerSimple",
+	"prps": {
+		"singlePage": true,
+		"mainAxisAlign": "center",
+		"crossAxisAlign": "center",
+		"backgroundColor": "lightGrey"
+	},
+	"wgts": [
+		{
+			"id": "container",
+			"type": "containerSimple",
+			"prps": {
+				"roundedBorders": true,
+				"hasShadow": true,
+				"padding": true,
+				"margin": "4px",
+				"width": "400px",
+				"backgroundColor": "white"
+			},
+			"wgts": [
+				{
+					"type": "label",
+					"prps": {
+						"cpt": "Fancy box",
+						"fontSize": "24px"
+					}
+				},
+				{
+					"id": "input",
+					"type": "input",
+					"prps": {
+						"placeholder": "Please enter a background color",
+						"flows": [
+							{
+								"to": "container",
+								"toKey": "backgroundColor"
+							}
+						]
+					}
+				},
+				{
+					"type": "button",
+					"prps": {
+						"cpt": "Change background color",
+						"fireScript": {
+							"actions": [
+								{
+									"type": "setState",
+									"target": "input",
+									"key": "backgroundColor",
+									"value": "red"
+								}
+							]
+						}
+					}
+				}
+			]
+		}
+	]
+}

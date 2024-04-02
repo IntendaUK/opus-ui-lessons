@@ -1,0 +1,39 @@
+{
+    "acceptPrps": {
+        "icon": {
+            "type": "string",
+            "dft": "home"
+        },
+        "header": {
+            "type": "string",
+            "dft": "Header text"
+        }
+    },
+    "type": "containerSimple",
+    "prps": {
+        "dir": "horizontal",
+        "crossAxisAlign": "center"
+    },
+    "wgts": [
+        {
+            "traits": [
+                {
+                    "trait": "./icon",
+                    "traitPrps": {
+                        "icon": "%icon%"
+                    }
+                }
+            ]
+        },
+        {
+            "traits": [
+                {
+                    "trait": "./label",
+                    "traitPrps": {
+                        "header": "%header%"
+                    }
+                }
+            ]
+        }
+    ]
+}

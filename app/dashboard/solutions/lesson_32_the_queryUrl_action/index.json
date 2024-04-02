@@ -1,0 +1,108 @@
+{
+    "scope": "main",
+    "type": "containerSimple",
+    "prps": {
+        "singlePage": true,
+        "backgroundColor": "lightGrey",
+        "mainAxisAlign": "center",
+        "crossAxisAlign": "center"
+    },
+    "wgts": [
+        {
+            "id": "NOTIFICATIONS",
+            "type": "notifications",
+            "container": "root",
+            "prps": {
+                "position": "absolute",
+                "top": "50px",
+                "left": "50%",
+                "transform": "translate(-50%, 50px)",
+                "minWidth": "500px",
+                "colorBackgroundSuccess": "success",
+                "colorBackgroundWarning": "warning",
+                "colorBackgroundInfo": "info",
+                "colorBackgroundDanger": "error",
+                "duration": "3000",
+                "prpsLabel": {
+                    "color": "white",
+                    "fontSize": "fontSizeMedium"
+                }
+            }
+        },
+        {
+            "relId": "loginContainer",
+            "traits": [
+                {
+                    "trait": "./visual/loginContainer",
+                    "traitPrps": {}
+                }
+            ]
+        },
+        {
+            "relId": "usersContainer",
+            "traits": [
+                {
+                    "trait": "./visual/usersContainer",
+                    "traitPrps": {}
+                }
+            ]
+        },
+        {
+            "type": "containerSimple",
+            "prps": {
+                "position": "absolute",
+                "bottom": "20%",
+                "left": "50%",
+                "transform": "translate(-50%, 20%)",
+                "dir": "horizontal",
+                "autoChildMargins": true
+            },
+            "wgts": [
+                {
+                    "type": "button",
+                    "prps": {
+                        "cpt": "Login",
+                        "fireScript": {
+                            "actions": [
+                                {
+                                    "type": "setState",
+                                    "target": "||loginContainer||",
+                                    "key": "vis",
+                                    "value": true
+                                },
+                                {
+                                    "type": "setState",
+                                    "target": "||usersContainer||",
+                                    "key": "vis",
+                                    "value": false
+                                }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "type": "button",
+                    "prps": {
+                        "cpt": "See Users",
+                        "fireScript": {
+                            "actions": [
+                                {
+                                    "type": "setState",
+                                    "target": "||loginContainer||",
+                                    "key": "vis",
+                                    "value": false
+                                },
+                                {
+                                    "type": "setState",
+                                    "target": "||usersContainer||",
+                                    "key": "vis",
+                                    "value": true
+                                }
+                            ]
+                        }
+                    }
+                }
+            ]
+        }
+    ]
+}

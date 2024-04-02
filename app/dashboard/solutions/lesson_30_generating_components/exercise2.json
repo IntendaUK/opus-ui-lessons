@@ -1,0 +1,66 @@
+{
+    "type": "containerSimple",
+    "prps": {
+        "singlePage": true,
+        "mainAxisAlign": "center",
+        "crossAxisAlign": "center",
+        "backgroundColor": "lightGrey"
+    },
+    "wgts": [
+        {
+            "scope": "main",
+            "type": "container",
+            "prps": {},
+            "wgts": [
+                {
+                    "type": "button",
+                    "prps": {
+                        "cpt": "Add Child",
+                        "fireScript": {
+                            "actions": [
+                                {
+                                    "type": "setState",
+                                    "target": "||main||",
+                                    "key": "extraWgts",
+                                    "value": [
+                                        {
+                                            "type": "container",
+                                            "prps": {
+                                                "canClick": true,
+                                                "fireScript": {
+                                                    "actions": [
+                                                        {
+                                                            "type": "setState",
+                                                            "target": "||main||",
+                                                            "key": "extraWgts",
+                                                            "value": [
+                                                                {
+                                                                    "type": "icon",
+                                                                    "prps": {
+                                                                        "value": "child_care"
+                                                                    }
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            },
+                                            "wgts": [
+                                                {
+                                                    "type": "label",
+                                                    "prps": {
+                                                        "cpt": "Add Grandchild"
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    }
+                }
+            ]
+        }
+    ]
+}

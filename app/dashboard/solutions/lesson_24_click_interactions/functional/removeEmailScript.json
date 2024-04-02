@@ -1,0 +1,31 @@
+{
+    "acceptPrps": {
+        "username": {
+            "type": "string"
+        }
+    },
+    "prps": {
+        "fireScript": {
+            "actions": [
+                {
+                    "type": "setState",
+                    "target": "||innerContainer.remove||",
+                    "key": "vis",
+                    "value": false
+                },
+                {
+                    "type": "setState",
+                    "target": "||innerContainer.add||",
+                    "key": "vis",
+                    "value": true
+                },
+                {
+                    "type": "setState",
+                    "target": "||addedContainer.%username%||",
+                    "key": "vis",
+                    "value": false
+                }
+            ]
+        }
+    }
+}

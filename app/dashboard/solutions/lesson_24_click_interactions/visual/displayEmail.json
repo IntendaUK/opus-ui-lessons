@@ -1,0 +1,67 @@
+{
+    "acceptPrps": {
+        "username": {
+            "type": "string"
+        },
+        "email": {
+            "type": "string"
+        }
+    },
+    "relId": "%username%",
+    "type": "container",
+    "prps": {
+        "margin": "tinyPadding",
+        "vis": false,
+        "dir": "horizontal"
+    },
+    "wgts": [
+        {
+            "type": "container",
+            "prps": {
+                "backgroundColor": "grey",
+                "canClick": true,
+                "fireScript": {
+                    "actions": [
+                        {
+                            "type": "setState",
+                            "key": "backgroundColor",
+                            "value": "red"
+                        }
+                    ]
+                }
+            },
+            "wgts": [
+                {
+                    "type": "label",
+                    "prps": {
+                        "cpt": "%email%"
+                    }
+                }
+            ]
+        },
+        {
+            "type": "container",
+            "prps": {
+                "canClick": true,
+                "fireScript": {
+                    "actions": [
+                        {
+                            "type": "setState",
+                            "target": "||addedContainer.%username%||",
+                            "key": "vis",
+                            "value": false
+                        }
+                    ]
+                }
+            },
+            "wgts": [
+                {
+                    "type": "icon",
+                    "prps": {
+                        "value": "close"
+                    }
+                }
+            ]
+        }
+    ]
+}

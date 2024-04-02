@@ -1,0 +1,145 @@
+{
+    "comment": "dashboard",
+    "type": "containerSimple",
+    "prps": {
+        "singlePage": true,
+        "backgroundColor": "orange",
+        "mainAxisAlign": "center",
+        "crossAxisAlign": "center"
+    },
+    "wgts": [
+        {
+            "type": "containerSimple",
+            "prps": {
+                "width": "230px",
+                "backgroundColor": "black",
+                "borderRadius": "smallPadding",
+                "padding": true,
+                "paddingSize": "tinyPadding"
+            },
+            "wgts": [
+                {
+                    "type": "containerSimple",
+                    "prps": {
+                        "dir": "horizontal",
+                        "padding": true,
+                        "paddingSize": "smallPadding",
+                        "borderBottom": "2px solid lightGrey"
+                    },
+                    "wgts": [
+                        {
+                            "type": "icon",
+                            "prps": {
+                                "value": "apps",
+                                "color": "white"
+                            }
+                        },
+                        {
+                            "type": "label",
+                            "prps": {
+                                "cpt": "Work Suite",
+                                "color": "white",
+                                "marginLeft": "smallPadding"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "label",
+                    "prps": {
+                        "cpt": "Apps",
+                        "color": "white",
+                        "marginLeft": "smallPadding",
+                        "padding": true,
+                        "paddingSize": "smallPadding 0px"
+                    }
+                },
+                {
+                    "type": "containerSimple",
+                    "prps": {
+                        "dir": "horizontal",
+                        "flexWrap": "wrap",
+                        "padding": true,
+                        "paddingSize": "0px smallPadding smallPadding smallPadding",
+                        "margin": "0px auto"
+                    },
+                    "wgts": [
+                        {
+                            "traits": [
+                                {
+                                    "trait": "./traits/iconLabel_b",
+                                    "traitPrps": {
+                                        "icon": "join_inner",
+                                        "iconColor": "blue",
+                                        "label": "Alpha"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "traits": [
+                                {
+                                    "trait": "./traits/iconLabel_b",
+                                    "traitPrps": {
+                                        "icon": "double_arrow",
+                                        "iconColor": "green",
+                                        "label": "Beta"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "traits": [
+                                {
+                                    "trait": "./traits/iconLabel_b",
+                                    "traitPrps": {
+                                        "icon": "stacked_line_chart",
+                                        "iconColor": "yellow",
+                                        "label": "Gamma"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "traits": [
+                                {
+                                    "trait": "./traits/iconLabel_b",
+                                    "traitPrps": {
+                                        "icon": "signal_cellular_alt",
+                                        "iconColor": "orange",
+                                        "label": "Delta"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "traits": [
+                                {
+                                    "trait": "./traits/iconLabel_b",
+                                    "traitPrps": {
+                                        "icon": "change_history",
+                                        "iconColor": "red",
+                                        "label": "Epsilon"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "traits": [
+                                {
+                                    "trait": "./traits/iconLabel_b",
+                                    "traitPrps": {
+                                        "icon": "circle",
+                                        "iconStyle": "outlined",
+                                        "iconColor": "purple",
+                                        "label": "Zeta"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

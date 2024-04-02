@@ -1,0 +1,11 @@
+{
+    "acceptPrps": {
+        "icon": {
+            "type": "string"
+        }
+    },
+    "type": "icon",
+    "prps": {
+        "value": "%icon%"
+    }
+}

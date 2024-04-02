@@ -1,0 +1,43 @@
+{
+    "type": "containerSimple",
+    "prps":{
+        "singlePage": true,
+        "backgroundColor": "mediumGrey",
+        "dir": "horizontal",
+        "padding": true,
+        "mainAxisAlign": "center",
+        "crossAxisAlign": "center"
+    },
+    "wgts": [
+        {
+            "type": "icon",
+            "prps":{
+                "value": "call",
+                "color": "red",
+                "borderRight": "2px solid black"
+            }
+        },
+        {
+            "type": "input",
+            "prps":{
+                "placeholder": "Phone number...",
+                "marginLeft": "20px"
+            }
+        },
+        {
+            "type": "icon",
+            "prps":{
+                "value": "home",
+                "color": "red",
+                "borderRight": "2px solid black"
+            }
+        },
+        {
+            "type": "input",
+            "prps":{
+                "placeholder": "Home address",
+                "marginLeft": "20px"
+            }
+        }
+    ]
+}

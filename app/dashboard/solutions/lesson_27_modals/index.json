@@ -1,0 +1,86 @@
+{
+	"scope": "dashboard",
+	"type": "containerSimple",
+	"prps": {
+		"singlePage": true,
+		"mainAxisAlign": "center",
+		"crossAxisAlign": "center",
+		"padding": true,
+		"autoChildMargins": true
+	},
+	"wgts": [
+		{
+			"relId": "input",
+			"type": "input",
+			"prps": {
+				"placeholder": "Modal title...",
+				"width": ""
+			}
+		},
+		{
+			"type": "label",
+			"prps": {
+				"cpt": "Name not set",
+				"flows": [
+					{
+						"from": "||dashboard.modal||",
+						"fromKey": "name",
+						"toKey": "cpt"
+					}
+				]
+			}
+		},
+		{
+			"type": "label",
+			"prps": {
+				"cpt": "Surname not set",
+				"flows": [
+					{
+						"from": "||dashboard.modal||",
+						"fromKey": "surname",
+						"toKey": "cpt"
+					}
+				]
+			}
+		},
+		{
+			"type": "container",
+			"prps": {
+				"canClick": true,
+				"backgroundColor": "lightGrey",
+				"fireScript": {
+					"id": "s",
+					"actions": [
+						{
+							"type": "setMultiState",
+							"target": "||dashboard.modal||",
+							"value": {
+								"vis": true,
+								"heading": "Modal: ((s.state.||dashboard.input||.value))"
+							}
+						}
+					]
+				},
+				"padding": true,
+				"paddingSize": "smallPadding mediumPadding"
+			},
+			"wgts": [
+				{
+					"type": "label",
+					"prps": {
+						"cpt": "Open Modal"
+					}
+				}
+			]
+		},
+		{
+			"relId": "modal",
+			"traits": [
+				{
+					"trait": "./modal",
+					"traitPrps": {}
+				}
+			]
+		}
+	]
+}

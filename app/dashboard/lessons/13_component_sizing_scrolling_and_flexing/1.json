@@ -1,0 +1,38 @@
+{
+	"type": "containerSimple",
+	"prps": {
+		"singlePage": true,
+		"dir": "horizontal"
+	},
+	"wgts": [
+		{
+			"type": "containerSimple",
+			"prps": {
+				"backgroundColor": "blue"
+			},
+			"wgts": []
+		},
+		{
+			"type": "containerSimple",
+			"prps": {
+				"dir": "vertical"
+			},
+			"wgts": [
+				{
+					"type": "containerSimple",
+					"prps": {
+						"backgroundColor": "cyan"
+					},
+					"wgts": []
+				},
+				{
+					"type": "containerSimple",
+					"prps": {
+						"backgroundColor": "white"
+					},
+					"wgts": []
+				}
+			]
+		}
+	]
+}

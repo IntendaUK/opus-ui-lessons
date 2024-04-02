@@ -1,0 +1,96 @@
+{
+	"type": "containerSimple",
+	"prps": {
+		"singlePage": true,
+		"dir": "horizontal"
+	},
+	"wgts": [
+		{
+			"type": "containerSimple",
+			"prps": {
+				"width": "15%",
+				"dir": "vertical"
+			},
+			"wgts": [
+				{
+					"type": "containerSimple",
+					"prps": {
+						"backgroundColor": "blue",
+						"height": "60px"
+					},
+					"wgts": []
+				},
+				{
+					"type": "container",
+					"prps": {
+						"backgroundColor": "white",
+						"dir": "vertical",
+						"scps": [
+							{
+								"actions": [
+									{
+										"type": "setState",
+										"key": "extraWgts",
+										"value": "{{eval.(new Array(100)).fill({ type: 'label', prps: { paddingSize: '12px', cpt: 'Menu Item'} })}}"
+									}
+								]
+							}
+						]
+					}
+				}
+			]
+		},
+		{
+			"type": "containerSimple",
+			"prps": {
+				"width": "85%",
+				"dir": "vertical",
+				"flex": true
+			},
+			"wgts": [
+				{
+					"type": "container",
+					"prps": {
+						"backgroundColor": "lightGrey",
+						"height": "80%",
+						"flex": true,
+						"overflow": "scroll",
+						"scps": [
+							{
+								"actions": [
+									{
+										"type": "setState",
+										"key": "extraWgts",
+										"value": "{{eval.(new Array(100)).fill({ type: 'label', prps: { paddingSize: '12px', cpt: 'Page Item'} })}}"
+									}
+								]
+							}
+						]
+					}
+				},
+				{
+					"type": "container",
+					"prps": {
+						"dir": "horizontal",
+						"backgroundColor": "darkGrey",
+						"crossAxisAlign": "center",
+						"height": "20%",
+						"flex": true,
+						"overflow": "auto",
+						"scps": [
+							{
+								"actions": [
+									{
+										"type": "setState",
+										"key": "extraWgts",
+										"value": "{{eval.(new Array(100)).fill({ type: 'label', prps: { color: 'white', paddingSize: '12px', cpt: 'Toolbar Item'} })}}"
+									}
+								]
+							}
+						]
+					}
+				}
+			]
+		}
+	]
+}

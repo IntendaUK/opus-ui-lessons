@@ -1,0 +1,89 @@
+{
+	"type": "containerSimple",
+	"prps": {
+		"singlePage": true,
+		"mainAxisAlign": "center",
+		"crossAxisAlign": "center"
+	},
+	"wgts": [
+		{
+			"type": "container",
+			"prps": {
+				"cptArray": [
+					"I",
+					"t",
+					"_",
+					"w",
+					"o",
+					"r",
+					"k",
+					"s",
+					"!"
+				],
+				"scps": [
+					{
+						"id": "sC",
+						"actions": [
+							{
+								"type": "setVariable",
+								"name": "extraWgts",
+								"value": []
+							},
+							{
+								"id": "sCM",
+								"type": "morphIterateArray",
+								"value": "{{state.self.cptArray}}",
+								"chain": [
+									{
+										"type": "pushVariable",
+										"scope": "sC",
+										"name": "extraWgts",
+										"value": {
+											"scope": "container",
+											"type": "container",
+											"prps": {
+												"canClick": true,
+												"fireScript": {
+													"id": "sCC",
+													"actions": [
+														{
+															"type": "setVariable",
+															"name": "newColor",
+															"value": "red"
+														},
+														{
+															"type": "setMultiState",
+															"target": "||container.label||",
+															"value": {
+																"color": "((sCC.variable.newColor))",
+																"cpt": "((sCM.variable.record))"
+															}
+														}
+													]
+												}
+											},
+											"wgts": [
+												{
+													"relId": "label",
+													"type": "label",
+													"prps": {
+														"cpt": "?"
+													}
+												}
+											]
+										}
+									}
+								]
+							},
+							{
+								"type": "setState",
+								"key": "extraWgts",
+								"value": "{{variable.extraWgts}}"
+							}
+						]
+					}
+				]
+			}
+		}
+	]
+}

@@ -1,0 +1,10 @@
+{
+    "startup": "startup",
+    "themes": [
+        "system",
+        "colors",
+        "global",
+        "components"
+    ],
+    "themeSets": []
+}

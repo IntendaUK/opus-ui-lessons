@@ -1,0 +1,223 @@
+{
+	"type": "containerSimple",
+	"prps": {
+		"singlePage": true,
+		"mainAxisAlign": "center",
+		"crossAxisAlign": "center",
+		"backgroundColor": "lightGrey"
+	},
+	"wgts": [
+		{
+			"scope": "container",
+			"type": "container",
+			"prps": {},
+			"wgts": [
+				{
+					"relId": "icon",
+					"type": "icon",
+					"prps": {
+						"value": "face"
+					}
+				},
+				{
+					"relId": "label",
+					"type": "label",
+					"prps": {
+						"cpt": "label here"
+					}
+				},
+				{
+					"relId": "input",
+					"type": "input",
+					"prps": {
+						"placeholder": "This is a placeholder...",
+						"flows": [
+							{
+								"to": "||container.label||",
+								"toKey": "cpt",
+								"ignoreEmptyString": true
+							}
+						]
+					}
+				},
+				{
+					"type": "button",
+					"prps": {
+						"cpt": "button here",
+						"padding": true,
+						"paddingSize": "0px",
+						"fireScript": {
+							"actions": [
+								{
+									"type": "setState",
+									"target": "||container.icon||",
+									"toKey": "||container.icon||.value",
+									"value": "((state.||container.input||.value))"
+								}
+							]
+						}
+					}
+				}
+			]
+		},
+		{
+			"scope": "container",
+			"type": "container",
+			"prps": {},
+			"wgts": [
+				{
+					"relId": "icon",
+					"type": "icon",
+					"prps": {
+						"value": "home"
+					}
+				},
+				{
+					"relId": "label",
+					"type": "label",
+					"prps": {
+						"cpt": "label here"
+					}
+				},
+				{
+					"relId": "input",
+					"type": "input",
+					"prps": {
+						"placeholder": "This is a placeholder...",
+						"flows": [
+							{
+								"to": "||container.label||",
+								"toKey": "cpt",
+								"ignoreEmptyString": true
+							}
+						]
+					}
+				},
+				{
+					"type": "button",
+					"prps": {
+						"cpt": "button here",
+						"padding": true,
+						"paddingSize": "0px",
+						"fireScript": {
+							"actions": [
+								{
+									"type": "setState",
+									"target": "||container.icon||",
+									"toKey": "||container.icon||.value",
+									"value": "((state.||container.input||.value))"
+								}
+							]
+						}
+					}
+				}
+			]
+		},
+		{
+			"scope": "container",
+			"type": "container",
+			"prps": {},
+			"wgts": [
+				{
+					"relId": "icon",
+					"type": "icon",
+					"prps": {
+						"value": "home"
+					}
+				},
+				{
+					"relId": "label",
+					"type": "label",
+					"prps": {
+						"cpt": "label here"
+					}
+				},
+				{
+					"relId": "input",
+					"type": "input",
+					"prps": {
+						"placeholder": "This is a placeholder...",
+						"flows": [
+							{
+								"to": "||container.label||",
+								"toKey": "cpt",
+								"ignoreEmptyString": true
+							}
+						]
+					}
+				},
+				{
+					"type": "button",
+					"prps": {
+						"cpt": "button here",
+						"padding": true,
+						"paddingSize": "0px",
+						"fireScript": {
+							"actions": [
+								{
+									"type": "setState",
+									"target": "||container.icon||",
+									"toKey": "||container.icon||.value",
+									"value": "((state.||container.input||.value))"
+								}
+							]
+						}
+					}
+				}
+			]
+		},
+		{
+			"scope": "container",
+			"type": "container",
+			"prps": {},
+			"wgts": [
+				{
+					"relId": "icon",
+					"type": "icon",
+					"prps": {
+						"value": "home"
+					}
+				},
+				{
+					"relId": "label",
+					"type": "label",
+					"prps": {
+						"cpt": "label here"
+					}
+				},
+				{
+					"relId": "input",
+					"type": "input",
+					"prps": {
+						"placeholder": "This is a placeholder...",
+						"flows": [
+							{
+								"to": "||container.label||",
+								"toKey": "cpt",
+								"ignoreEmptyString": true
+							}
+						]
+					}
+				},
+				{
+					"type": "button",
+					"prps": {
+						"cpt": "button here",
+						"padding": true,
+						"paddingSize": "0px",
+						"fireScript": {
+							"actions": [
+								{
+									"type": "setState",
+									"target": "||container.icon||",
+									"toKey": "||container.icon||.value",
+									"value": "((state.||container.input||.value))"
+								}
+							]
+						}
+					}
+				}
+			]
+		}
+	]
+}

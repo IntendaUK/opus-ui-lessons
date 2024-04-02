@@ -1,0 +1,12 @@
+{
+	"type": "containerSimple",
+	"prps": {
+		"singlePage": true,
+		"mainAxisAlign": "center",
+		"crossAxisAlign": "center",
+		"backgroundColor": "lightGrey"
+	},
+	"wgts": [
+		
+	]
+}

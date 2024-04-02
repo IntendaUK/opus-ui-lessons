@@ -1,0 +1,59 @@
+{
+    "acceptPrps": {
+        "enabled": {
+            "type": "boolean",
+            "dft": false
+        }
+    },
+    "relId": "toolbar",
+    "type": "containerSimple",
+    "prps": {
+        "padding": true,
+        "paddingSize": "smallPadding",
+        "borderTop": "1px solid {theme.colors.divider}",
+        "backgroundColor": "white",
+        "dir": "horizontal",
+        "mainAxisAlign": "end"
+    },
+    "wgts": [
+        {
+            "type": "container",
+            "prps": {
+                "padding": true,
+                "paddingSize": "tinyPadding smallPadding",
+                "border": "1px solid {theme.colors.mediumGrey}",
+                "roundedBorders": true,
+                "canClick": true,
+                "enabled": "$enabled$",
+                "fireScript": {
+                    "actions": [
+                        {
+                            "type": "setState",
+                            "target": "||modal||",
+                            "key": "vis",
+                            "value": false
+                        }
+                    ]
+                },
+                "canHover": true,
+                "hoverPrps": {
+                    "on": {
+                        "backgroundColor": "lightGrey"
+                    },
+                    "off": {
+                        "backgroundColor": "white"
+                    }
+                }
+            },
+            "wgts": [
+                {
+                    "type": "label",
+                    "prps": {
+                        "cpt": "Close",
+                        "color": "primaryText"
+                    }
+                }
+            ]
+        }
+    ]
+}

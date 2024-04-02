@@ -1,0 +1,88 @@
+{
+    "type": "containerSimple",
+    "prps": {},
+    "wgts": [
+        {
+            "id": "l1",
+            "type": "label",
+            "prps": {
+                "cpt": "Hello world"
+            }
+        },
+        {
+            "id": "i1",
+            "type": "input",
+            "prps": {
+                "placeholder": "Change Color",
+                "scps": [
+                    {
+                        "triggers": [
+                            {
+                                "event": "onStateChange"
+                            }
+                        ],
+                        "actions": [
+                            {
+                                "log": true,
+                                "type": "setState",
+                                "target": "l1",
+                                "key": "color",
+                                "value": "((state.i1.value))"
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "i2",
+            "type": "input",
+            "prps": {
+                "placeholder": "Change Background Color",
+                "scps": [
+                    {
+                        "triggers": [
+                            {
+                                "event": "onStateChange"
+                            }
+                        ],
+                        "actions": [
+                            {
+                                "log": true,
+                                "type": "setState",
+                                "target": "l1",
+                                "key": "backgroundColor",
+                                "value": "((state.i2.value))"
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "i3",
+            "type": "input",
+            "prps": {
+                "placeholder": "Change Font Size",
+                "scps": [
+                    {
+                        "triggers": [
+                            {
+                                "event": "onStateChange"
+                            }
+                        ],
+                        "actions": [
+                            {
+                                "log": true,
+                                "type": "setState",
+                                "target": "l1",
+                                "key": "fontSize",
+                                "value": "((state.i3.value))"
+                            }
+                        ]
+                    }
+                ]
+            }
+        }
+    ]
+}
