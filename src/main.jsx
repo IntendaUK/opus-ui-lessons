@@ -13,6 +13,7 @@ import './main.css';
 
 	loadApp({
 		mdaPackage,
+		loadUrlParameters: true,
 		config: {
 			env: 'development'
 		}

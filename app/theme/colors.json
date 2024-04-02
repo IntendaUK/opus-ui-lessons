@@ -1,3 +1,13 @@
 {
-
+	"text": "black",
+	"primary": "red",
+	"secondary": "blue",
+	"iconPrimary": "black",
+	"primaryText": "black",
+	"secondaryText": "gray",
+	"divider": "gray",
+	"error": "red",
+	"warning": "orange",
+	"info": "blue",
+	"success": "green"`
 }
