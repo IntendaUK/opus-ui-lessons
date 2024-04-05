@@ -3,6 +3,7 @@ import { loadApp } from '@intenda/opus-ui';
 
 //Component Libraries
 import '@intenda/opus-ui-components';
+import '@intenda/opus-ui-grid';
 
 //Styles
 import './main.css';
