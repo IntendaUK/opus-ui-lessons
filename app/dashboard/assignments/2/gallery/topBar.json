@@ -1,0 +1,58 @@
+{
+	"acceptPrps": {},
+	"type": "containerSimple",
+	"prps": {
+		"dir": "horizontal",
+		"padding": true,
+		"paddingSize": "mediumPadding padding",
+		"crossAxisAlign": "center",
+		"mainAxisAlign": "space-between",
+		"borderBottom": "2px solid #444"
+	},
+	"wgts": [
+		{
+			"type": "label",
+			"prps": {
+				"cpt": "Image Browser",
+				"color": "lightText",
+				"fontSize": "24px",
+				"bold": true
+			}
+		},
+		{
+			"type": "containerSimple",
+			"prps": {
+				"dir": "horizontal",
+				"gap": "mediumPadding",
+				"crossAxisAlign": "center"
+			},
+			"wgts": [
+				{
+					"type": "icon",
+					"prps": {
+						"value": "grade",
+						"fontSize": "22px",
+						"iconStyle": "outlined",
+						"color": "#777"
+					}
+				},
+				{
+					"type": "icon",
+					"prps": {
+						"value": "vertical_align_bottom",
+						"fontSize": "22px",
+						"color": "#777"
+					}
+				},
+				{
+					"type": "icon",
+					"prps": {
+						"value": "more_horiz",
+						"fontSize": "22px",
+						"color": "#777"
+					}
+				}
+			]
+		}
+	]
+}

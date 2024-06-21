@@ -1,0 +1,57 @@
+{
+	"traitPrps": {},
+	"type": "containerSimple",
+	"prps": {
+		"padding": true,
+		"paddingSize": "mediumPadding"
+	},
+	"wgts": [
+		{
+			"type": "containerSimple",
+			"prps": {
+				"dir": "horizontal",
+				"crossAxisAlign": "center"
+			},
+			"wgts": [
+				{
+					"type": "icon",
+					"prps": {
+						"value": "change_history",
+						"color": "niceBlue",
+						"fontSize": "34px",
+						"marginLeft": "tinyPadding"
+					}
+				},
+				{
+					"type": "label",
+					"prps": {
+						"cpt": "Opus UI",
+						"color": "lightText",
+						"marginLeft": "smallPadding",
+						"fontSize": "24px",
+						"bold": true
+					}
+				}
+			]
+		},
+		{
+			"traits": [
+				{
+					"trait": "./menuItems",
+					"traitPrps": {}
+				}
+			]
+		},
+		{
+			"traits": [
+				{
+					"trait": "./lightDarkModeSwitcher",
+					"traitPrps": {}
+				}
+			],
+			"prps": {
+				"marginTop": "auto"
+			}
+		}
+	]
+	}

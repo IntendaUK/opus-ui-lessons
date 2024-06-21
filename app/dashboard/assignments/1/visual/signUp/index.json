@@ -1,0 +1,49 @@
+{
+	"type": "containerSimple",
+	"prps": {
+		"backgroundColor": "#3AA6AF",
+		"crossAxisAlign": "center",
+		"mainAxisAlign": "center",
+		"padding": true,
+		"gap": "mediumPadding"
+	},
+	"wgts": [
+		{
+			"type": "label",
+			"prps": {
+				"cpt": "Hello, Friend!",
+				"bold": true,
+				"color": "white",
+				"fontSize": "30px"
+			}
+		},
+		{
+			"type": "label",
+			"prps": {
+				"cpt": "Enter your personal details and start your journey with us",
+				"color": "white"
+			}
+		},
+		{
+			"type": "container",
+			"prps": {
+				"canClick": true,
+				"backgroundColor": "#3AA6AF",
+				"padding": true,
+				"paddingSize": "smallPadding giantPadding",
+				"crossAxisAlign": "center",
+				"border": "2px solid white",
+				"borderRadius": "25px"
+			},
+			"wgts": [
+				{
+					"type": "label",
+					"prps": {
+						"cpt": "Sign up",
+						"color": "white"
+					}
+				}
+			]
+		}
+	]
+}

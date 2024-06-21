@@ -1,0 +1,61 @@
+{
+	"acceptPrps": {
+		"icon": {
+			"type": "string"
+		},
+		"cpt": {
+			"type": "string"
+		},
+		"mode": {
+			"type": "string"
+		}
+	},
+	"type": "container",
+	"prps": {
+		"dir": "horizontal",
+		"crossAxisAlign": "center",
+		"padding": true,
+		"paddingSize": "tinyPadding smallPadding",
+		"roundedBorders": true,
+		"borderRadius": "10px",
+		"gap": "smallPadding",
+		"canClick": true,
+		"fireScript": {
+			"actions": [
+				{
+					"type": "setState",
+					"target": "||lightDarkModeSwitcher||",
+					"key": "selectedMode",
+					"value": "%mode%"
+				}
+			]
+		},
+		"flows": [
+			{
+				"from": "||lightDarkModeSwitcher||",
+				"fromKey": "selectedMode",
+				"toKey": "backgroundColor",
+				"mapFunctionString": "v => v === '%mode%' ? 'mainBgColor' : 'transparent'"
+			}
+		]
+	},
+	"wgts": [
+		{
+			"type": "icon",
+			"prps": {
+				"value": "%icon%",
+				"color": "lightText",
+				"fontSize": "16px",
+				"iconStyle": "outlined"
+			}
+		},
+		{
+			"type": "label",
+			"prps": {
+				"cpt": "%cpt%",
+				"color": "lightText",
+				"fontSize": "14px"
+			}
+		}
+	]
+}

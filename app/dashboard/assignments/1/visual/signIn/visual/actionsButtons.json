@@ -1,0 +1,39 @@
+{
+	"type": "containerSimple",
+	"prps": {
+		"dir": "horizontal",
+		"gap": "12px"
+	},
+	"wgts": [
+		{
+			"traits": [
+				{
+					"trait": "./actionButton",
+					"traitPrps": {
+						"icon": "face"
+					}
+				}
+			]
+		},
+		{
+			"traits": [
+				{
+					"trait": "./actionButton",
+					"traitPrps": {
+						"icon": "phone"
+					}
+				}
+			]
+		},
+		{
+			"traits": [
+				{
+					"trait": "./actionButton",
+					"traitPrps": {
+						"icon": "home"
+					}
+				}
+			]
+		}		
+	]
+}

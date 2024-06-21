@@ -1,0 +1,35 @@
+{
+	"acceptPrps": {
+		"icon": "string",
+		"placeholder": "string"
+	},
+	"type": "containerSimple",
+	"prps": {
+		"dir": "horizontal",
+		"width": "17vw",
+		"minWidth": "300px",
+		"crossAxisAlign": "center",
+		"backgroundColor": "#F7F6F6",
+		"padding": true,
+		"paddingSize": "tinyPadding  0px"
+	},
+	"wgts": [
+		{
+			"type": "icon",
+			"prps": {
+				"value": "%icon%",
+				"margin": "0px smallPadding",
+				"color": "#BEBDC7",
+				"iconStyle": "outlined"
+			}
+		},
+		{
+			"type": "input",
+			"prps": {
+				"placeholder": "%placeholder%",
+				"colorPlaceholder": "#999",
+				"color": "black"
+			}
+		}
+	]
+}

@@ -1,0 +1,35 @@
+{
+	"type": "containerSimple",
+	"prps": {
+		"backgroundColor": "mainBgColor",
+		"singlePage": true,
+		"dir": "horizontal"
+	},
+	"wgts": [
+		{
+			"traits": [
+				{
+					"trait": "./menu/index",
+					"traitPrps": {}
+				}
+			]
+		},
+		{
+			"type": "containerSimple",
+			"prps": {
+				"flex": true,
+				"borderRadius": "10px",
+				"dir": "vertical",
+				"backgroundColor": "innerBgColor",
+				"margin": "mediumPadding"
+			},
+			"wgts": [
+				{
+					"id": "applicationViewport",
+					"type": "viewport",
+					"prps": {}
+				}
+			]
+		}
+	]
+}

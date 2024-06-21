@@ -1,0 +1,62 @@
+{
+	"acceptPrps": {},
+	"scope": "menu",
+	"type": "containerSimple",
+	"prps": {
+		"dir": "vertical",
+		"marginTop": "padding",
+		"gap": "smallPadding",
+		"selectedMenuItem": null
+	},
+	"wgts": [
+		{
+			"traits": [
+				{
+					"trait": "./menuItem",
+					"traitPrps": {
+						"icon": "chat",
+						"iconColor": "niceBlue",
+						"cpt": "Chats"
+					}
+				}
+			]
+		},
+		{
+			"traits": [
+				{
+					"trait": "./menuItem",
+					"traitPrps": {
+						"icon": "image",
+						"iconColor": "niceGreen",
+						"cpt": "Gallery",
+						"openDashboard": "assignments/2/gallery/index"
+					}
+				}
+			]
+		},
+		{
+			"traits": [
+				{
+					"trait": "./menuItem",
+					"traitPrps": {
+						"icon": "paid",
+						"iconColor": "niceOrange",
+						"cpt": "Subscription"
+					}
+				}
+			]
+		},
+		{
+			"traits": [
+				{
+					"trait": "./menuItem",
+					"traitPrps": {
+						"icon": "settings",
+						"iconColor": "nicePurple",
+						"cpt": "Settings"
+					}
+				}
+			]
+		}
+	]
+}

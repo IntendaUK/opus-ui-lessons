@@ -1,0 +1,20 @@
+{
+	"type": "container",
+	"prps": {
+		"canClick": true,
+		"backgroundColor": "#3AA6AF",
+		"padding": true,
+		"paddingSize": "smallPadding bigPadding",
+		"crossAxisAlign": "center",
+		"borderRadius": "25px"
+	},
+	"wgts": [
+		{
+			"type": "label",
+			"prps": {
+				"cpt": "Sign in",
+				"color": "white"
+			}
+		}
+	]
+}

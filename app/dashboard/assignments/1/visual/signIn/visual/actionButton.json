@@ -1,0 +1,24 @@
+{
+	"acceptPrps": {
+		"icon": {
+			"type": "string",
+			"dft": "face"
+		}
+	},
+	"type": "container",
+	"prps": {
+		"canClick": true,
+		"border": "1px solid #DDD",
+		"borderRadius": "50%",
+		"padding": true,
+		"paddingSize": "4px"
+	},
+	"wgts": [
+		{
+			"type": "icon",
+			"prps": {
+				"value": "%icon%"
+			}
+		}
+	]
+}

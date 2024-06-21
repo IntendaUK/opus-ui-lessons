@@ -1,0 +1,32 @@
+{
+    "type": "containerSimple",
+    "prps": {
+        "singlePage": true,
+        "backgroundColor": "#EEEFEF",
+        "crossAxisAlign": "center",
+        "mainAxisAlign": "center"
+    },
+    "wgts": [
+        {
+            "type": "containerSimple",
+            "prps": {
+                "borderRadius": "10px",
+                "dir": "horizontal",
+                "hasShadow": true,
+                "margin": "4px"
+            },
+            "wgts": [
+                {
+                    "traits": [
+                        "./visual/signIn/index"
+                    ]
+                },
+                {
+                    "traits": [
+                        "./visual/signUp/index"
+                    ]
+                }
+            ]
+        }
+    ]
+}

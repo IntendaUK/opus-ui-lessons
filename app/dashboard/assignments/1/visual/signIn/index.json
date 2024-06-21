@@ -1,0 +1,79 @@
+{
+	"type": "containerSimple",
+	"prps": {
+		"backgroundColor": "white",
+		"crossAxisAlign": "center",
+		"mainAxisAlign": "center",
+		"padding": true,
+		"paddingSize": "giantPadding",
+		"gap": "mediumPadding"
+	},
+	"wgts": [
+		{
+			"traits": [
+				"./visual/logo"
+			]
+		},
+		{
+			"type": "label",
+			"prps": {
+				"cpt": "Sign in",
+				"fontSize": "30px",
+				"color": "#3AA6AF",
+				"bold": true
+			}
+		},
+		{
+			"traits": [
+				"./visual/actionsButtons"
+			]
+		},
+		{
+			"type": "label",
+			"prps": {
+				"cpt": "or use your email account:",
+				"color": "#BDBCCC"
+			}
+		},
+		{
+			"traits": [
+				{
+					"trait": "./visual/input",
+					"traitPrps": {
+						"icon": "mail",
+						"placeholder": "Email"
+					}
+				}
+			]
+		},
+		{
+			"traits": [
+				{
+					"trait": "./visual/input",
+					"traitPrps": {
+						"icon": "lock",
+						"placeholder": "Password"
+					}
+				}
+			],
+			"prps": {
+				"marginTop": "-16px"
+			}
+		},
+		{
+			"type": "label",
+			"prps": {
+				"cpt": "Forgot your password?",
+				"paddingSize": "0px 0px tinyPadding 0px",
+				"borderBottom": "2px solid #DDD"
+			}
+		},
+		{
+			"traits": [
+				{
+					"trait": "./visual/signInButton"
+				}
+			]
+		}
+	]
+}

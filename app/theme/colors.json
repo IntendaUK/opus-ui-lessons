@@ -5,9 +5,16 @@
 	"iconPrimary": "black",
 	"primaryText": "black",
 	"secondaryText": "gray",
+	"lightText": "#EFEFEF",
 	"divider": "gray",
 	"error": "red",
 	"warning": "orange",
 	"info": "blue",
-	"success": "green"`
+	"success": "green",
+	"mainBgColor": "#252525",
+	"innerBgColor": "#353535",
+	"niceBlue": "#67BFEF",
+    "niceGreen": "#7DEB74",
+    "niceOrange": "#FFBB85",
+    "nicePurple": "#C072D5"
 }

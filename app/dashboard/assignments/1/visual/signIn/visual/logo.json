@@ -1,0 +1,27 @@
+{
+	"type": "containerSimple",
+	"prps": {
+		"dir": "horizontal",
+		"crossAxisAlign": "center",
+		"position": "absolute",
+		"top": "smallPadding",
+		"left": "smallPadding"
+	},
+	"wgts": [
+		{
+			"type": "icon",
+			"prps": {
+				"value": "change_history",
+				"color": "#BDBCBC",
+				"marginRight": "smallPadding"
+			}
+		},
+		{
+			"type": "label",
+			"prps": {
+				"cpt": "Opus UI",
+				"color": "#BDBCBC"
+			}
+		}
+	]
+}

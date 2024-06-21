@@ -1,0 +1,87 @@
+{
+	"acceptPrps": {
+		"icon": {
+			"type": "string"
+		},
+		"iconColor": {
+			"type": "string"
+		},
+		"cpt": {
+			"type": "string"
+		},
+		"openDashboard": {
+			"type": "string"
+		}
+	},
+	"type": "container",
+	"prps": {
+		"width": "100%",
+		"borderRadius": "10px",
+		"padding": true,
+		"paddingSize": "smallPadding",
+		"canClick": true,
+		"dir": "horizontal",
+		"fireScript": {
+			"actions": [
+				{
+					"type": "setState",
+					"target": "||menu||",
+					"key": "selectedMenuItem",
+					"value": "%cpt%"
+				},
+				{
+					"type": "applyComparison",
+					"operator": "isTruthy",
+					"value": "$openDashboard$",
+					"branch": {
+						"true": [
+							{
+								"type": "setState",
+								"target": "applicationViewport",
+								"key": "value",
+								"value": "%openDashboard%"
+							}
+						],
+						"false": [
+							{
+								"type": "setState",
+								"target": "applicationViewport",
+								"key": "value",
+								"value": null
+							}
+						]
+					}
+				}
+			]
+		},
+		"flows": [
+			{
+				"from": "||menu||",
+				"fromKey": "selectedMenuItem",
+				"toKey": "backgroundColor",
+				"mapFunctionString": "v => v === '%cpt%' ? 'innerBgColor' : 'transparent'"
+			}
+		]
+		
+	},
+	"wgts": [
+		{
+			"type": "icon",
+			"prps": {
+				"value": "%icon%",
+				"color": "%iconColor%",
+				"fontSize": "20px",
+				"iconStyle": "outlined",
+				"marginRight": "mediumPadding"
+			}
+		},
+		{
+			"type": "label",
+			"prps": {
+				"cpt": "%cpt%",
+				"color": "lightText",
+				"fontSize": "16px"
+			}
+		}
+	]
+}

@@ -1,0 +1,39 @@
+{
+	"acceptPrps": {},
+	"scope": "lightDarkModeSwitcher",
+	"type": "containerSimple",
+	"prps": {
+		"backgroundColor": "innerBgColor",
+		"padding": true,
+		"paddingSize": "tinyPadding",
+		"dir": "horizontal",
+		"borderRadius": "10px",
+		"selectedMode": "light"
+	},
+	"wgts": [
+		{
+			"traits": [
+				{
+					"trait": "./lightDarkModeButton",
+					"traitPrps": {
+						"icon": "light_mode",
+						"cpt": "Light",
+						"mode": "light"
+					}
+				}
+			]
+		},
+		{
+			"traits": [
+				{
+					"trait": "./lightDarkModeButton",
+					"traitPrps": {
+						"icon": "dark_mode",
+						"cpt": "Dark",
+						"mode": "dark"
+					}
+				}
+			]
+		}
+	]
+}
