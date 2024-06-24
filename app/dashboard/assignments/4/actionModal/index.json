@@ -1,0 +1,136 @@
+{
+	"acceptPrps": {},
+	"scope": "modal",
+	"type": "containerSimple",
+	"container": "root",
+	"prps": {
+		"position": "absolute",
+		"left": "0%",
+		"top": "0%",
+		"width": "100%",
+		"height": "100%",
+		"backgroundColor": "rgba(0, 0, 0, 0.8)",
+		"mainAxisAlign": "center",
+		"crossAxisAlign": "center",
+		"vis": false,
+		"data": null
+	},
+	"wgts": [
+		{
+			"type": "containerSimple",
+			"prps": {
+				"backgroundColor": "white",
+				"padding": true,
+				"paddingSize": "smallPadding"
+			},
+			"wgts": [
+				{
+					"type": "label",
+					"prps": {
+						"flows": [
+							{
+								"from": "||modal||",
+								"fromKey": "data",
+								"toKey": "cpt",
+								"mapFunctionString": "v => `${v.source} has bumped into ${v.target}`"
+							}
+						]
+					}
+				},
+				{
+					"type": "containerSimple",
+					"prps": {
+						"marginTop": "smallPadding",
+						"dir": "horizontal",
+						"mainAxisAlign": "space-around",
+						"crossAxisAlign": "center"
+					},
+					"wgts": [
+						{
+							"type": "container",
+							"prps": {
+								"canClick": true,
+								"backgroundColor": "lightSecondary",
+								"padding": true,
+								"paddingSize": "smallPadding",
+								"fireScript": {
+									"id": "sSH",
+									"actions": [
+										{
+											"type": "showNotification",
+											"msg": "((state.||modal||.data.source)) says 'hi' to ((state.||modal||.data.target))"
+										},
+										{
+											"type": "setState",
+											"target": "||modal||",
+											"key": "vis",
+											"value": false
+										}
+									]
+								}
+							},
+							"wgts": [
+								{
+									"type": "label",
+									"prps": {
+										"cpt": "Say hi",
+										"color": "black"
+									}
+								}
+							]
+						},
+						{
+							"type": "container",
+							"prps": {
+								"canClick": true,
+								"backgroundColor": "lightSecondary",
+								"padding": true,
+								"paddingSize": "smallPadding",
+								"fireScript": {
+									"id": "sSG",
+									"actions": [
+										{
+											"type": "showNotification",
+											"msg": "((state.||modal||.data.source)) says 'goodbye' to ((state.||modal||.data.target))"
+										},
+										{
+											"type": "setState",
+											"target": "||game.characters||",
+											"key": "data",
+											"value": [
+												"{{eval.",
+												"   const res = {{state.||game.characters||.data}};",
+												"   const record = res.find(r => r.name === {{state.||modal||.data.target}});",
+												"   res.spliceWhere(r => r === record);",
+												"   res;",
+												"}}"
+											],
+											"inlineKeys": [
+												"value"
+											]
+										},
+										{
+											"type": "setState",
+											"target": "||modal||",
+											"key": "vis",
+											"value": false
+										}
+									]
+								}
+							},
+							"wgts": [
+								{
+									"type": "label",
+									"prps": {
+										"cpt": "Say goodbye",
+										"color": "black"
+									}
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	]
+}

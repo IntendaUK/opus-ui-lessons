@@ -1,0 +1,65 @@
+{
+	"acceptPrps": {
+		"x": "integer",
+		"y": "integer"
+	},
+	"prps": {
+		"scps": [
+			{
+				"id": "sCA-%x%-%y%",
+				"triggers": [
+					{
+						"event": "onStateChange",
+						"key": "contents"
+					}
+				],
+				"actions": [
+					{
+						"type": "stopScript",
+						"condition": {
+							"operator": "isLessThan",
+							"value": "{{sCA-%x%-%y%.state.self.contents.length}}",
+							"compareValue": 2
+						}
+					},
+					{
+						"actionCondition": {
+							"operator": "isEqual",
+							"value": "{{sCA-%x%-%y%.state.self.contents.0.name}}",
+							"compareValue": "{{sCA-%x%-%y%.state.||game||.selectedCharacterName}}"
+						},
+						"type": "setMultiState",
+						"target": "||game.actionModal||",
+						"value": {
+							"vis": true,
+							"data": {
+								"source": "{{sCA-%x%-%y%.state.self.contents.0.name}}",
+								"target": "{{sCA-%x%-%y%.state.self.contents.1.name}}",
+								"x": "%x%",
+								"y": "%y%"
+							}
+						}
+					},
+					{
+						"actionCondition": {
+							"operator": "isNotEqual",
+							"value": "{{sCA-%x%-%y%.state.self.contents.0.name}}",
+							"compareValue": "{{sCA-%x%-%y%.state.||game||.selectedCharacterName}}"
+						},
+						"type": "setMultiState",
+						"target": "||game.actionModal||",
+						"value": {
+							"vis": true,
+							"data": {
+								"source": "{{sCA-%x%-%y%.state.self.contents.1.name}}",
+								"target": "{{sCA-%x%-%y%.state.self.contents.0.name}}",
+								"x": "%x%",
+								"y": "%y%"
+							}
+						}
+					}
+				]
+			}
+		]
+	}
+}

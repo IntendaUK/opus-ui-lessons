@@ -1,0 +1,123 @@
+{
+	"acceptPrps": {
+		"x": "integer",
+		"y": "integer"
+	},
+	"scope": ["cell", "cell-%x%-%y%"],
+	"type": "container",
+	"traits": [
+		{
+			"trait": "./modalChecker",
+			"traitPrps": {
+				"x": "%x%",
+				"y": "%y%"
+			}
+		}	
+	],
+	"prps": {
+		"width": "{{morph.||game||.gameBoard.tileSize}}",
+		"height": "{{morph.||game||.gameBoard.tileSize}}",
+		"backgroundColor": "white",
+		"autoChildMarginsSize": "smallPadding",
+		"contents": [],
+		"scps": [
+			{
+
+				"id": "sB-%c%-%y%",
+				"triggers": [
+					{
+						"event": "onStateChange",
+						"source": "||game.characters||",
+						"key": "data"
+					},
+					{
+						"event": "onMount"
+					}
+				],
+				"actions": [
+					{
+						"type": "stopScript",
+						"condition": {
+							"operator": "isFalsy",
+							"value": "{{sB-%c%-%y%.state.||game.characters||.data}}"
+						}
+					},
+					{
+						"type": "setState",
+						"key": "contents",
+						"value": [
+							"{{eval.",
+							"   const data = {{state.||game.characters||.data}};",
+							"   const res = data.filter(d => d.x === %x% && d.y === %y%);",
+							"   res;",
+							"}}"
+						],
+						"inlineKeys": [
+							"value"
+						]
+					}
+				]
+			},
+			{
+				"id": "sC-%x%-%y%",
+				"triggers": [
+					{
+						"event": "onStateChange",
+						"key": "contents"
+					}
+				],
+				"actions": [
+					{
+						"type": "stopScript",
+						"condition": {
+							"operator": "isEqual",
+							"value": "{{sC-%x%-%y%.state.self.contents.length}}",
+							"compareValue": "{{sC-%x%-%y%.state.self.extraWgts.length}}"
+						}
+					},
+					{
+						"type": "setState",
+						"key": "deleteKeys",
+						"value": [
+							"extraWgts"
+						]
+					},
+					{
+						"type": "wait",
+						"duration": 1
+					},
+					{
+						"type": "stopScript",
+						"condition": {
+							"operator": "isEqual",
+							"value": "{{sC-%x%-%y%.state.self.contents.length}}",
+							"compareValue": 0
+						}
+					},
+					{
+						"id": "sC-%x%-%y%-M",
+						"type": "mapArray",
+						"value": "{{state.self.contents}}",
+						"mapTo": {
+							"traits": [
+								{
+									"trait": "assignments/4/characters/character",
+									"traitPrps": {
+										"data": "{{sC-%x%-%y%-M.variable.record}}"
+									}
+								}
+							]
+						},
+						"storeAsVariable": "contents"
+					},
+					{
+						"type": "setState",
+						"key": "extraWgts",
+						"value": "{{variable.contents}}"
+					}
+				]
+			}
+		]
+	},
+	"wgts": []
+}

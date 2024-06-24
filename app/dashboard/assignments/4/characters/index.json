@@ -1,0 +1,47 @@
+{
+	"acceptPrps": {},
+	"type": "containerSimple",
+	"traits": [
+		{
+			"trait": "./keyboardController",
+			"traitPrps": {}
+		}	
+	],
+	"prps": {
+		"vis": false,
+		"data": null,
+		"scps": [
+			{
+				"actions": [
+					{
+						"type": "queryUrl",
+						"url": "https://reqres.in/api/users",
+						"extractAny": [
+							{
+								"path": "response.data",
+								"variable": "data"
+							}
+						]
+					},
+					{
+						"id": "sM",
+						"type": "mapArray",
+						"value": "{{variable.data}}",
+						"mapTo": {
+							"name": "{{sM.variable.record.first_name}}",
+							"avatar": "{{sM.variable.record.avatar}}",
+							"x": "{{sM.eval.~~(Math.random() * ((sM.state.||game||.gameBoard.width)) )}}",
+							"y": "{{sM.eval.~~(Math.random() * ((sM.state.||game||.gameBoard.height)) )}}"
+						},
+						"storeAsVariable": "data"
+					},
+					{
+						"type": "setState",
+						"key": "data",
+						"value": "{{variable.data}}"
+					}
+				]
+			}
+		]
+	}
+}

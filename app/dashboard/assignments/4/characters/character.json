@@ -1,0 +1,52 @@
+{
+	"acceptPrps": {
+		"data": "object"
+	},
+	"type": "container",
+	"prps": {
+		"position": "absolute",
+		"canClick": true,
+		"fireScript": {
+			"actions": [
+				{
+					"type": "setState",
+					"target": "||game||",
+					"key": "selectedCharacterName",
+					"value": "%data.name%"
+				},
+				{
+					"type": "showNotification",
+					"msg": "%data.name% has woken up"
+				}
+			]
+		},
+		"width": "{{morph.||game||.gameBoard.tileSize}}",
+		"height": "{{morph.||game||.gameBoard.tileSize}}",
+		"filter": "grayscale(100%)",
+		"flows": [
+			{
+				"from": "||game||",
+				"fromKey": "selectedCharacterName",
+				"toKey": "filter",
+				"mapFunctionString": [
+					"v => v === '%data.name%' ?",
+					"    'grayscale(0%)' :",
+					"    'grayscale(100%) sepia(100%) brightness(50%)'"
+				],
+				"inlineKeys": [
+					"mapFunctionString"
+				]
+			}
+		]
+	},
+	"wgts": [
+		{
+			"type": "image",
+			"prps": {
+				"value": "%data.avatar%",
+				"width": "100%",
+				"height": "100%"
+			}
+		}
+	]
+}

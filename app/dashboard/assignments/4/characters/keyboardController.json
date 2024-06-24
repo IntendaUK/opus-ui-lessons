@@ -1,0 +1,155 @@
+{
+	"acceptPrps": {},
+	"prps": {
+		"scps": [
+			{
+				"comment": "Up arrow",
+				"triggers": [
+					{
+						"event": "onGlobalKeyDown",
+						"match": [
+							{
+								"operator": "isEqual",
+								"value": "((event.keyCode))",
+								"compareValue": 38
+							},
+							{
+								"operator": "isTruthy",
+								"value": "{{state.||game||.selectedCharacterName}}"
+							}
+						]
+					}
+				],
+				"actions": [
+					{
+						"type": "setState",
+						"target": "||game.characters||",
+						"key": "data",
+						"value": [
+							"{{eval.",
+							"   const res = {{state.||game.characters||.data}};",
+							"   const record = res.find(r => r.name === {{state.||game||.selectedCharacterName}});",
+							"   record.y--;",
+							"   res;",
+							"}}"
+						],
+						"inlineKeys": [
+							"value"
+						]
+					}
+				]
+			},
+			{
+				"comment": "Down arrow",
+				"triggers": [
+					{
+						"event": "onGlobalKeyDown",
+						"match": [
+							{
+								"operator": "isEqual",
+								"value": "((event.keyCode))",
+								"compareValue": 40
+							},
+							{
+								"operator": "isTruthy",
+								"value": "{{state.||game||.selectedCharacterName}}"
+							}
+						]
+					}
+				],
+				"actions": [
+					{
+						"type": "setState",
+						"target": "||game.characters||",
+						"key": "data",
+						"value": [
+							"{{eval.",
+							"   const res = {{state.||game.characters||.data}};",
+							"   const record = res.find(r => r.name === {{state.||game||.selectedCharacterName}});",
+							"   record.y++;",
+							"   res;",
+							"}}"
+						],
+						"inlineKeys": [
+							"value"
+						]
+					}
+				]
+			},
+			{
+				"comment": "Left arrow",
+				"triggers": [
+					{
+						"event": "onGlobalKeyDown",
+						"match": [
+							{
+								"operator": "isEqual",
+								"value": "((event.keyCode))",
+								"compareValue": 37
+							},
+							{
+								"operator": "isTruthy",
+								"value": "{{state.||game||.selectedCharacterName}}"
+							}
+						]
+					}
+				],
+				"actions": [
+					{
+						"type": "setState",
+						"target": "||game.characters||",
+						"key": "data",
+						"value": [
+							"{{eval.",
+							"   const res = {{state.||game.characters||.data}};",
+							"   const record = res.find(r => r.name === {{state.||game||.selectedCharacterName}});",
+							"   record.x--;",
+							"   res;",
+							"}}"
+						],
+						"inlineKeys": [
+							"value"
+						]
+					}
+				]
+			},
+			{
+				"comment": "Right arrow",
+				"triggers": [
+					{
+						"event": "onGlobalKeyDown",
+						"match": [
+							{
+								"operator": "isEqual",
+								"value": "((event.keyCode))",
+								"compareValue": 39
+							},
+							{
+								"operator": "isTruthy",
+								"value": "{{state.||game||.selectedCharacterName}}"
+							}
+						]
+					}
+				],
+				"actions": [
+					{
+						"type": "setState",
+						"target": "||game.characters||",
+						"key": "data",
+						"value": [
+							"{{eval.",
+							"   const res = {{state.||game.characters||.data}};",
+							"   const record = res.find(r => r.name === {{state.||game||.selectedCharacterName}});",
+							"   record.x++;",
+							"   res;",
+							"}}"
+						],
+						"inlineKeys": [
+							"value"
+						]
+					}
+				]
+			}
+		]
+	}
+}

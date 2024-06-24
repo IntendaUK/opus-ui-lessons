@@ -1,0 +1,135 @@
+{
+	"scope": "game",
+	"type": "containerSimple",
+	"prps": {
+		"singlePage": true,
+		"backgroundColor": "lightGrey",
+		"mainAxisAlign": "center",
+		"crossAxisAlign": "center",
+		"gameBoard": {
+			"width": 10,
+			"height": 10,
+			"tileSize": 100
+		},
+		"selectedCharacterName": null
+	},
+	"wgts": [
+		{
+			"relId": "characters",
+			"traits": [
+				{
+					"trait": "./characters/index",
+					"traitPrps": {}
+				}
+			]
+		},
+		{
+			"relId": "actionModal",
+			"traits": [
+				{
+					"trait": "./actionModal/index",
+					"traitPrps": {}
+				}
+			]
+		},
+		{
+			"type": "containerSimple",
+			"prps": {
+				"dir": "horizontal",
+				"mainAxisAlign": "space-between",
+				"crossAxisAlign": "center",
+				"autoChildMargins": "true",
+				"autoChildMarginsSize": "smallPadding",
+				"overflow": "hidden"
+			},
+			"wgts": [
+				{
+					"type": "repeater",
+					"prps": {
+						"scps": [
+							{
+								"actions": [
+									{
+										"type": "setState",
+										"key": "staticData",
+										"value": [
+											"{{eval.",
+											"    const res = new Array({{state.||game||.gameBoard.width}});",
+											"    res.fill({});",
+											"    res;",
+											"}}"
+										],
+										"inlineKeys": [
+											"value"
+										]
+									}
+								]
+							}
+						],
+						"rowMdaScope": "outer",
+						"rowMda": {
+							"type": "containerSimple",
+							"prps": {
+								"dir": "vertical",
+								"mainAxisAlign": "space-between",
+								"crossAxisAlign": "center",
+								"autoChildMargins": "true",
+								"autoChildMarginsSize": "smallPadding",
+								"overflow": "hidden"
+							},
+							"wgts": [
+								{
+									"type": "repeater",
+									"prps": {
+										"scps": [
+											{
+												"actions": [
+													{
+														"type": "setState",
+														"key": "staticData",
+														"value": "{{eval.const res = new Array({{state.||game||.gameBoard.height}}); res.fill({}); res;}}"
+													}
+												]
+											}
+										],
+										"rowMda": {
+											"traits": [
+												{
+													"trait": "./cell/index",
+													"traitPrps": {
+														"x": "{{outer.rowNumber}}",
+														"y": "{{rowNumber}}"
+													}
+												}
+											]
+										}
+									}
+								}
+							]
+						}
+					}
+				}
+			]
+		},
+		{
+			"id": "NOTIFICATIONS",
+			"type": "notifications",
+			"prps": {
+				"position": "absolute",
+				"overflow": "hidden",
+				"bottom": 0,
+				"right": "smallPadding",
+				"zIndex": 9999999,
+				"hasBorder": true,
+				"duration": "2500",
+				"colorBackgroundInfo": "niceBlue",
+				"prpsLabel": {
+					"color": "iconPrimary",
+					"fontSize": "fontSize",
+					"whiteSpace": "pre",
+					"userSelect": "text"
+				}
+			}
+		}
+	]
+}
