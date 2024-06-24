@@ -1,0 +1,49 @@
+{
+	"acceptPrps": {
+		"icon": {
+			"type": "string"
+		},
+		"cpt": {
+			"type": "string"
+		},
+		"flowsForIcon": {
+			"type": "array",
+			"dft": []
+		},
+		"flowsForLabel": {
+			"type": "array",
+			"dft": []
+		}
+	},
+	"type": "containerSimple",
+	"prps": {
+		"dir": "horizontal",
+		"crossAxisAlign": "center",
+		"marginLeft": "smallPadding"
+	},
+	"wgts": [
+		{
+			"type": "icon",
+			"prps": {
+				"value": "%icon%",
+				"color": "niceYellow",
+				"iconStyle": "outlined",
+				"fontSize": "25px",
+				"textShadow": "2px 2px 5px #1b0b30",
+				"flows": "$flowsForIcon$"
+			}
+		},
+		{
+			"type": "label",
+			"prps": {
+				"cpt": "%cpt%",
+				"fontSize": "18px",
+				"bold": true,
+				"color": "#a5a0e2",
+				"marginLeft": "smallPadding",
+				"textShadow": "2px 2px 5px #1b0b30",
+				"flows": "$flowsForLabel$"
+			}
+		}
+	]
+}

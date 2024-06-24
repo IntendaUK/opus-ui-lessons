@@ -1,0 +1,57 @@
+{
+	"type": "containerSimple",
+	"prps": {
+		"crossAxisAlign": "center",
+		"padding": true,
+		"paddingSize": "25px 0px 25px 0px"
+	},
+	"wgts": [
+		{
+			"traits": [
+				{
+					"trait": "assignments/3/shared/yellowIcons",
+					"traitPrps": {
+						"icon": "castle",
+						"iconFontSize": "72px"
+					}
+				}
+			]
+		},
+		{
+			"type": "containerSimple",
+			"prps": {
+				"dir": "horizontal",
+				"marginTop": "smallPadding"
+			},
+			"wgts": [
+				{
+					"traits": [
+						{
+							"trait": "assignments/3/shared/label",
+							"traitPrps": {
+								"cpt": "OPUS",
+								"labelColor": "lightText",
+								"labelFontSize": "37px"
+							}
+						}
+					]
+				},
+				{
+					"traits": [
+						{
+							"trait": "assignments/3/shared/label",
+							"traitPrps": {
+								"cpt": "QUEST",
+								"labelColor": "niceYellow",
+								"labelFontSize": "37px"
+							}
+						}
+					],
+					"prps": {
+						"marginLeft": "smallPadding"
+					}
+				}
+			]
+		}
+	]
+}

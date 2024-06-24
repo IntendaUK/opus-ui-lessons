@@ -1,0 +1,21 @@
+{
+	"acceptPrps": {
+		"cpt": {
+			"type": "string"
+		},
+		"labelColor": {
+			"type": "string"
+		},
+		"labelFontSize": {
+			"type": "string"
+		}
+	},
+	"type": "label",
+	"prps": {
+		"cpt": "%cpt%",
+		"color": "%labelColor%",
+		"fontSize": "%labelFontSize%",
+		"textShadow": "2px 2px 5px #1b0b30",
+		"bold": true
+	}
+}

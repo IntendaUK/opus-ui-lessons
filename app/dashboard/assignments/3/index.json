@@ -1,0 +1,63 @@
+{
+	"scope": "mainContainer",
+	"type": "containerSimple",
+	"prps": {
+		"singlePage": true,
+		"crossAxisAlign": "center",
+		"mainAxisAlign": "center",
+		"background": "linear-gradient(114deg, rgba(98,100,170,1) 0%, rgba(14,0,39,1) 100%)"
+	},
+	"wgts": [
+		{
+			"type": "containerSimple",
+			"prps": {
+				"borderRadius": "40px",
+				"crossAxisAlign": "center",
+				"background": "linear-gradient(114deg, rgba(34,35,97,1) 0%, rgba(23,19,68,1) 100%)",
+				"hasShadow": true,
+				"shadow": "5px 5px 21px -5px rgba(27,11,48,1)",
+				"margin": "8px"
+			},
+			"wgts": [
+				{
+					"traits": [
+						"./header"
+					]
+				},
+				{
+					"traits": [
+						{
+							"trait": "./divider",
+							"traitPrps": {}
+						}
+					]
+				},
+				{
+					"traits": [
+						"./classBoxes/index"
+					]
+				},
+				{
+					"traits": [
+						{
+							"trait": "./divider",
+							"traitPrps": {}
+						}
+					]
+				},
+				{
+					"relId": "attrs",
+					"traits": [
+						"./attributes/index"
+					]
+				}
+			]
+		},
+		{
+			"relId": "bottomAttrLabel",
+			"traits": [
+				"./bottomLabel"
+			]
+		}
+	]
+}

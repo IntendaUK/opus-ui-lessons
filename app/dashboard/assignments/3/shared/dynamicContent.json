@@ -1,0 +1,29 @@
+{
+	"acceptPrps": {
+		"headerWgts": {
+			"type": "array",
+			"dft": []
+		},
+		"contentWgts": {
+			"type": "array",
+			"dft": []
+		}
+	},
+	"type": "containerSimple",
+	"prps": {
+		"padding": true,
+		"paddingSize": "mediumPadding"
+	},
+	"wgts": [
+		{
+			"type": "containerSimple",
+			"prps": {},
+			"wgts": "$headerWgts$"
+		},
+		{
+			"type": "containerSimple",
+			"prps": {},
+			"wgts": "$contentWgts$"
+		}
+	]
+}

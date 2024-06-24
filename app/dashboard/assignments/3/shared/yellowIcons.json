@@ -1,0 +1,18 @@
+{
+	"acceptPrps": {
+		"icon": {
+			"type": "string"
+		},
+		"iconFontSize": {
+			"type": "string"
+		}
+	},
+	"type": "icon",
+	"prps": {
+		"value": "%icon%",
+		"color": "niceYellow",
+		"iconStyle": "outlined",
+		"fontSize": "%iconFontSize%",
+		"textShadow": "2px 2px 5px #1b0b30"
+	}
+}

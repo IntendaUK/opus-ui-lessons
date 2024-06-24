@@ -1,0 +1,18 @@
+{
+	"prps": {
+		"flows": [
+			{
+				"from": "||classContainer||",
+				"fromKey": "hovered",
+				"toKey": "filter",
+				"mapFunctionString": "(v) => v ? 'contrast(100%) brightness(170%) ': 'contrast(100%)'"
+			},
+			{
+				"from": "||classContainer||",
+				"fromKey": "hovered",
+				"toKey": "color",
+				"mapFunctionString": "(v) => v ? '#212049': '#FDFDFD'"
+			}
+		]
+	}
+}

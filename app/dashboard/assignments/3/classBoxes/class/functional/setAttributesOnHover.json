@@ -1,0 +1,80 @@
+{
+	"acceptPrps": {
+		"labelClass": {
+			"type": "string"
+		},
+		"iconClass": {
+			"type": "string"
+		},
+		"barData": {
+			"type": "array",
+			"dft": [
+				0,
+				0,
+				0,
+				0
+			]
+		}
+	},
+	"prps": {
+		"scps": [
+			{
+				"triggers": [
+					{
+						"source": "||classContainer||",
+						"event": "onStateChange",
+						"key": "hovered",
+						"match": [
+							{
+								"operator": "isTruthy",
+								"key": "hovered"
+							}
+						]
+					}
+				],
+				"actions": [
+					{
+						"type": "setMultiState",
+						"target": "||attrsContainer||",
+						"value": {
+							"icon": "%iconClass%",
+							"label": "%labelClass% attributes:",
+							"barChartData": "$barData$"
+						}
+					}
+				]
+			},
+			{
+				"triggers": [
+					{
+						"source": "||classContainer||",
+						"event": "onStateChange",
+						"key": "hovered",
+						"match": [
+							{
+								"operator": "isFalsy",
+								"key": "hovered"
+							}
+						]
+					}
+				],
+				"actions": [
+					{
+						"type": "setMultiState",
+						"target": "||attrsContainer||",
+						"value": {
+							"icon": "bar_chart",
+							"label": "Hover classes to view attributes",
+							"barChartData": [
+								0,
+								0,
+								0,
+								0
+							]
+						}
+					}
+				]
+			}
+		]
+	}
+}

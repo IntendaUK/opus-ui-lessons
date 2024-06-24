@@ -1,0 +1,11 @@
+{
+	"type": "label",
+	"prps": {
+		"cpt": "You have not clicked a class yet...",
+		"marginTop": "smallPadding",
+		"color": "niceYellow",
+		"textShadow": "2px 2px 5px #1b0b30",
+		"fontSize": "24px",
+		"marginTop": "padding"
+	}
+}

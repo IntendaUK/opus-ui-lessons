@@ -1,0 +1,89 @@
+{
+	"scope": "attrsContainer",
+	"type": "containerSimple",
+	"prps": {
+		"flex": true,
+		"crossAxisAlign": "start",
+		"width": "100%",
+		"padding": true,
+		"paddingSize": "mediumPadding"
+	},
+	"wgts": [
+		{
+			"traits": [
+				{
+					"trait": "assignments/3/shared/iconAndLabel",
+					"traitPrps": {
+						"icon": "bar_chart",
+						"cpt": "Hover to view attributes",
+						"flowsForIcon": [
+							{
+								"from": "||attrsContainer||",
+								"fromKey": "icon",
+								"toKey": "value"
+							}
+						],
+						"flowsForLabel": [
+							{
+								"from": "||attrsContainer||",
+								"fromKey": "label",
+								"toKey": "cpt"
+							}
+						]
+					}
+				}
+			]
+		},
+		{
+			"type": "containerSimple",
+			"prps": {
+				"marginTop": "mediumPadding",
+				"gap": "mediumPadding",
+				"flex": true,
+				"width": "100%"
+			},
+			"wgts": [
+				{
+					"traits": [
+						{
+							"trait": "./barChart/barChart",
+							"traitPrps": {
+								"dataIndex": "0"
+							}
+						}
+					]
+				},
+				{
+					"traits": [
+						{
+							"trait": "./barChart/barChart",
+							"traitPrps": {
+								"dataIndex": "1"
+							}
+						}
+					]
+				},
+				{
+					"traits": [
+						{
+							"trait": "./barChart/barChart",
+							"traitPrps": {
+								"dataIndex": "2"
+							}
+						}
+					]
+				},
+				{
+					"traits": [
+						{
+							"trait": "./barChart/barChart",
+							"traitPrps": {
+								"dataIndex": "3"
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

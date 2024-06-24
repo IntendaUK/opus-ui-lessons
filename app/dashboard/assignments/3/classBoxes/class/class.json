@@ -1,0 +1,88 @@
+{
+	"acceptPrps": {
+		"iconClass": {
+			"type": "string"
+		},
+		"labelClass": {
+			"type": "string"
+		},
+		"dftBarData": {
+			"type": "array",
+			"dft": []
+		},
+		"barData": {
+			"type": "array",
+			"dft": []
+		}
+	},
+	"scope": "classContainer",
+	"type": "container",
+	"prps": {
+		"canHover": true,
+		"canClick": true,
+		"margin": "noPadding tinyPadding",
+		"crossAxisAlign": "center",
+		"fireScript": {
+			"actions": [
+				{
+					"type": "setState",
+					"target": "||mainContainer.bottomAttrLabel||",
+					"key": "cpt",
+					"value": "You have clicked the %labelClass% class"
+				}
+			]
+		}
+	},
+	"wgts": [
+		{
+			"type": "icon",
+			"prps": {
+				"value": "%iconClass%",
+				"fontSize": "55px",
+				"iconStyle": "outlined",
+				"color": "#FDFDFD",
+				"textShadow": "1px 1px 15px white",
+				"background": "linear-gradient(180deg, rgba(46, 44, 99, 1) 0%, rgba(46, 44, 99, 1) 35%, rgba(71, 63, 157, 1) 100%)",
+				"filter": "contrast(100%) ",
+				"border": "2px solid #473F9D",
+				"transform": "skewX(-8deg)",
+				"paddingSize": "tinyPadding",
+				"shadow": "1px 1px 4px #15181B",
+				"borderRadius": "20px",
+				"margin": "smallPadding tinyPadding",
+				"transitionProperty": "filter, color",
+				"transitionDuration": "0.3s"
+			},
+			"traits": [
+				{
+					"trait": "./functional/setClassBoxBackgroundOnHover"
+				},
+				{
+					"trait": "./functional/setAttributesOnHover",
+					"traitPrps": {
+						"iconClass": "%iconClass%",
+						"labelClass": "%labelClass%",
+						"barData": "$barData$",
+						"dftBarData": "$dftBarData$"
+					}
+				}
+			]
+		},
+		{
+			"type": "label",
+			"prps": {
+				"cpt": "%labelClass%",
+				"color": "niceYellow",
+				"opacity": "0",
+				"transitionProperty": "opacity",
+				"transitionDuration": "0.3s",
+				"textShadow": "2px 2px 5px #1b0b30"
+			},
+			"traits": [
+				{
+					"trait": "./functional/setLabelOpacityOnHover"
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,50 @@
+{
+	"prps": {
+		"scps": [
+			{
+				"triggers": [
+					{
+						"source": "||classContainer||",
+						"event": "onStateChange",
+						"key": "hovered",
+						"match": [
+							{
+								"operator": "isTruthy",
+								"key": "hovered"
+							}
+						]
+					}
+				],
+				"actions": [
+					{
+						"type": "setState",
+						"key": "opacity",
+						"value": 1
+					}
+				]
+			},
+			{
+				"triggers": [
+					{
+						"source": "||classContainer||",
+						"event": "onStateChange",
+						"key": "hovered",
+						"match": [
+							{
+								"operator": "isFalsy",
+								"key": "hovered"
+							}
+						]
+					}
+				],
+				"actions": [
+					{
+						"type": "setState",
+						"key": "opacity",
+						"value": 0
+					}
+				]
+			}
+		]
+	}
+}

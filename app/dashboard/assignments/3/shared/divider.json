@@ -1,0 +1,7 @@
+{
+	"type": "containerSimple",
+	"prps": {
+		"height": "2px",
+		"background": "linear-gradient(133deg, rgba(255, 255, 0, 1) 0%, rgba(47, 46, 99, 1) 0%, rgba(48, 48, 102, 1) 100%)"
+	}
+}
